@@ -1,0 +1,158 @@
+student@T3:~$ mkdir ajce
+student@T3:~$ cd ajce
+student@T3:~/ajce$ mkdir mca
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ mkdir intmca
+student@T3:~/ajce/mca$ mkdir rmca
+student@T3:~/ajce/mca$ mkdir lemca
+student@T3:~/ajce/mca$ man cp
+student@T3:~/ajce/mca$ man cp
+student@T3:~/ajce/mca$ cat > f.txt
+anjali
+akhil^C
+student@T3:~/ajce/mca$ cat > s.txt
+anitta
+tintu
+^C
+student@T3:~/ajce/mca$ cp f.txt s.txt
+student@T3:~/ajce/mca$ ls
+f.txt  intmca  lemca  rmca  s.txt
+student@T3:~/ajce/mca$ cat s.txt
+anjali
+student@T3:~/ajce/mca$ man cp
+student@T3:~/ajce/mca$ cd ~
+student@T3:~$ mkdir amalj
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ cd rmca
+student@T3:~/ajce/mca/rmca$ cat > t.txt
+amal jyothy
+kanjirappalli
+
+^C
+student@T3:~/ajce/mca/rmca$ cp t.txt anu.txt
+student@T3:~/ajce/mca/rmca$ ls
+anu.txt  t.txt
+student@T3:~/ajce/mca/rmca$ cat anu.txt
+amal jyothy
+kanjirappalli
+
+student@T3:~/ajce/mca/rmca$ cp anu.txt amalj
+student@T3:~/ajce/mca/rmca$ cp *.txt amalj
+cp: target 'amalj' is not a directory
+student@T3:~/ajce/mca/rmca$ cp * s.txt amalj
+cp: target 'amalj' is not a directory
+student@T3:~/ajce/mca/rmca$ cp  *s.txt amalj
+cp: cannot stat '*s.txt': No such file or directory
+student@T3:~/ajce/mca/rmca$ cp -r anu.txt s.txt
+student@T3:~/ajce/mca/rmca$ ls
+amalj  anu.txt  s.txt  t.txt
+student@T3:~/ajce/mca/rmca$ cat s.txt
+amal jyothy
+kanjirappalli
+
+student@T3:~/ajce/mca/rmca$ man cp
+student@T3:~/ajce/mca/rmca$ cp -R lmca intmca mca
+cp: target 'mca' is not a directory
+student@T3:~/ajce/mca/rmca$ cp -R lmca intmca rmca
+cp: target 'rmca' is not a directory
+student@T3:~/ajce/mca/rmca$ cp *.txt anu.txt
+cp: target 'anu.txt' is not a directory
+student@T3:~/ajce/mca/rmca$ cp *.txt lmca
+cp: target 'lmca' is not a directory
+student@T3:~/ajce/mca/rmca$ cp *.txt amalj
+cp: target 'amalj' is not a directory
+student@T3:~/ajce/mca/rmca$ ls
+amalj  anu.txt  s.txt  t.txt
+student@T3:~/ajce/mca/rmca$ cp t.txt amalj
+student@T3:~/ajce/mca/rmca$ cd amalj
+bash: cd: amalj: Not a directory
+student@T3:~/ajce/mca/rmca$ mkdir am
+student@T3:~/ajce/mca/rmca$ cp t.txt am
+student@T3:~/ajce/mca/rmca$ cd am
+student@T3:~/ajce/mca/rmca/am$ ls
+t.txt
+student@T3:~/ajce/mca/rmca/am$ cd ..
+student@T3:~/ajce/mca/rmca$ ls
+am  amalj  anu.txt  s.txt  t.txt
+student@T3:~/ajce/mca/rmca$ cp *.txt am
+student@T3:~/ajce/mca/rmca$ cd am
+student@T3:~/ajce/mca/rmca/am$ ls
+anu.txt  s.txt  t.txt
+student@T3:~/ajce/mca/rmca/am$ cd ..
+student@T3:~/ajce/mca/rmca$ mkdir an
+student@T3:~/ajce/mca/rmca$ mkdir ar
+student@T3:~/ajce/mca/rmca$ cp -R an am
+student@T3:~/ajce/mca/rmca$ cd am
+student@T3:~/ajce/mca/rmca/am$ ls
+an  anu.txt  s.txt  t.txt
+student@T3:~/ajce/mca/rmca/am$ cd ..
+student@T3:~/ajce/mca/rmca$ mkdir aj
+student@T3:~/ajce/mca/rmca$ cp -r aj an am
+student@T3:~/ajce/mca/rmca$ cd am
+student@T3:~/ajce/mca/rmca/am$ ls
+aj  an  anu.txt  s.txt  t.txt
+student@T3:~/ajce/mca/rmca/am$ cp -R aj an am
+cp: target 'am' is not a directory
+student@T3:~/ajce/mca/rmca/am$ cd ..
+student@T3:~/ajce/mca/rmca$ cp -b anu.txt anu1.txt
+student@T3:~/ajce/mca/rmca$ ls
+aj  am  amalj  an  anu1.txt  anu.txt  ar  s.txt  t.txt
+student@T3:~/ajce/mca/rmca$ cp -i anu.txt anu1.txt
+cp: overwrite 'anu1.txt'? 
+student@T3:~/ajce/mca/rmca$ ls
+aj  am  amalj  an  anu1.txt  anu.txt  ar  s.txt  t.txt
+student@T3:~/ajce/mca/rmca$ cp -b s.txt s1.txt
+student@T3:~/ajce/mca/rmca$ ls s1.txt s1.txt~
+ls: cannot access 's1.txt~': No such file or directory
+s1.txt
+student@T3:~/ajce/mca/rmca$ ls s1.txt s1.txt
+s1.txt  s1.txt
+student@T3:~/ajce/mca/rmca$ cp ~
+cp: missing destination file operand after '/home/student'
+Try 'cp --help' for more information.
+student@T3:~/ajce/mca/rmca$ cp -b s.txt ss.txt
+student@T3:~/ajce/mca/rmca$ ls
+aj  amalj  anu1.txt  ar      ss.txt  t.txt
+am  an     anu.txt   s1.txt  s.txt
+student@T3:~/ajce/mca/rmca$ ls
+aj  amalj  anu1.txt  ar      ss.txt  t.txt
+am  an     anu.txt   s1.txt  s.txt
+student@T3:~/ajce/mca/rmca$ cp -b ss.txt t.txt
+student@T3:~/ajce/mca/rmca$ ls
+aj  amalj  anu1.txt  ar      ss.txt  t.txt
+am  an     anu.txt   s1.txt  s.txt   t.txt~
+student@T3:~/ajce/mca/rmca$ cp -u ss.txt t.txt
+student@T3:~/ajce/mca/rmca$ ls
+aj  amalj  anu1.txt  ar      ss.txt  t.txt
+am  an     anu.txt   s1.txt  s.txt   t.txt~
+student@T3:~/ajce/mca/rmca$ cp -R s.txt x1.txt s2.txt
+cp: target 's2.txt' is not a directory
+student@T3:~/ajce/mca/rmca$ cp -R s.txt x1.txt ar
+cp: cannot stat 'x1.txt': No such file or directory
+student@T3:~/ajce/mca/rmca$ cp -R s.txt s1.txt ar
+student@T3:~/ajce/mca/rmca$ ls
+aj  amalj  anu1.txt  ar      ss.txt  t.txt
+am  an     anu.txt   s1.txt  s.txt   t.txt~
+student@T3:~/ajce/mca/rmca$ cp -r s.txt s1.txt am
+student@T3:~/ajce/mca/rmca$ ls
+aj  amalj  anu1.txt  ar      ss.txt  t.txt
+am  an     anu.txt   s1.txt  s.txt   t.txt~
+student@T3:~/ajce/mca/rmca$ cp -r  am an aj
+student@T3:~/ajce/mca/rmca$ ls
+aj  amalj  anu1.txt  ar      ss.txt  t.txt
+am  an     anu.txt   s1.txt  s.txt   t.txt~
+student@T3:~/ajce/mca/rmca$  cat > aa.txt
+asha
+^C
+student@T3:~/ajce/mca/rmca$ 
+student@T3:~/ajce/mca/rmca$ ls
+aa.txt  am     an        anu.txt  s1.txt  s.txt  t.txt~
+aj      amalj  anu1.txt  ar       ss.txt  t.txt
+student@T3:~/ajce/mca/rmca$ cp -u aa.txt s.txt
+student@T3:~/ajce/mca/rmca$ cat aa.txt
+asha
+student@T3:~/ajce/mca/rmca$ cat s.txt
+asha
+student@T3:~/ajce/mca/rmca$ 
+

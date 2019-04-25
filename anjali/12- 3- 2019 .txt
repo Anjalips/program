@@ -1,0 +1,261 @@
+student@T3:~/ajce/mca/mca$ man expr
+student@T3:~/ajce/mca/mca$ expr 12 + 8
+20
+student@T3:~/ajce/mca/mca$ expr 12 \ * 3
+expr: syntax error
+student@T3:~/ajce/mca/mca$ expr 12 \* 3
+36
+student@T3:~/ajce/mca/mca$ echo "enter 2 numbers"
+enter 2 numbers
+student@T3:~/ajce/mca/mca$ read a
+10
+student@T3:~/ajce/mca/mca$ read b
+20
+student@T3:~/ajce/mca/mca$ sum=`expr $a + $b'
+> ^C
+student@T3:~/ajce/mca/mca$ echo "sum=" $sum
+sum=
+student@T3:~/ajce/mca/mca$ man expr
+student@T3:~/ajce/mca/mca$ expr 12 + 8
+20
+student@T3:~/ajce/mca/mca$ expr 12 \ * 3
+expr: syntax error
+student@T3:~/ajce/mca/mca$ expr 12 \* 3
+36
+student@T3:~/ajce/mca/mca$ echo "enter 2 numbers"
+enter 2 numbers
+student@T3:~/ajce/mca/mca$ read a
+10
+student@T3:~/ajce/mca/mca$ read b
+20
+student@T3:~/ajce/mca/mca$ sum=`expr $a + $b'
+> ^C
+student@T3:~/ajce/mca/mca$ echo "sum=" $sum
+sum=
+student@T3:~/ajce/mca/mca$ sum=expr $a + $b
+10: command not found
+student@T3:~/ajce/mca/mca$ y=10
+student@T3:~/ajce/mca/mca$ y=`expr $y+1`
+student@T3:~/ajce/mca/mca$ echo $y
+10+1
+student@T3:~/ajce/mca/mca$ y=`expr $y + 1`
+expr: non-integer argument
+student@T3:~/ajce/mca/mca$ echo $y
+
+student@T3:~/ajce/mca/mca$ y=10
+student@T3:~/ajce/mca/mca$ y=`expr $y + 1`
+student@T3:~/ajce/mca/mca$ echo $y
+11
+student@T3:~/ajce/mca/mca$ a=10
+student@T3:~/ajce/mca/mca$ echo $a
+10
+student@T3:~/ajce/mca/mca$ a=`expr $a + 2`
+student@T3:~/ajce/mca/mca$ echo $a
+12
+student@T3:~/ajce/mca/mca$ echo "enter 2 numbers"
+enter 2 numbers
+student@T3:~/ajce/mca/mca$ read a
+10
+student@T3:~/ajce/mca/mca$ read b
+20
+student@T3:~/ajce/mca/mca$ sum=
+123/                    f123.tar.gz             file.tar
+aaa                     f1.c                    file.tar.gz
+ar/                     f2.c                    name-of-archive.tar.gz
+cut.txt                 f3.c                    sample.tar
+student@T3:~/ajce/mca/mca$ sum=`expr $a+$b`
+student@T3:~/ajce/mca/mca$ echo"sum="$sum
+echosum=10+20: command not found
+student@T3:~/ajce/mca/mca$ echo"sum=$su"m
+echosum=m: command not found
+student@T3:~/ajce/mca/mca$ echo"sum=$sum"
+echosum=10+20: command not found
+student@T3:~/ajce/mca/mca$ echo"sum="$sum
+echosum=10+20: command not found
+student@T3:~/ajce/mca/mca$ echo"sum=" $sum
+echosum=: command not found
+student@T3:~/ajce/mca/mca$ echo"sum = " $sum
+echosum = : command not found
+student@T3:~/ajce/mca/mca$ sum=`expr $a+$b`
+student@T3:~/ajce/mca/mca$ echo $sum
+10+20
+student@T3:~/ajce/mca/mca$ sum=`expr $a + $b`
+student@T3:~/ajce/mca/mca$ echo $sum
+30
+student@T3:~/ajce/mca/mca$ echo "sum =" $sum
+sum = 30
+student@T3:~/ajce/mca/mca$ expr help--
+help--
+student@T3:~/ajce/mca/mca$ expr help - -
+expr: non-integer argument
+student@T3:~/ajce/mca/mca$ expr help- -
+expr: syntax error
+student@T3:~/ajce/mca/mca$ echo enter a number
+enter a number
+student@T3:~/ajce/mca/mca$ read q
+10
+student@T3:~/ajce/mca/mca$ echo "number is "$q
+number is 10
+student@T3:~/ajce/mca/mca$ echo enter a number read a 
+enter a number read a
+student@T3:~/ajce/mca/mca$ expr --help
+Usage: expr EXPRESSION
+  or:  expr OPTION
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+Print the value of EXPRESSION to standard output.  A blank line below
+separates increasing precedence groups.  EXPRESSION may be:
+
+  ARG1 | ARG2       ARG1 if it is neither null nor 0, otherwise ARG2
+
+  ARG1 & ARG2       ARG1 if neither argument is null or 0, otherwise 0
+
+  ARG1 < ARG2       ARG1 is less than ARG2
+  ARG1 <= ARG2      ARG1 is less than or equal to ARG2
+  ARG1 = ARG2       ARG1 is equal to ARG2
+  ARG1 != ARG2      ARG1 is unequal to ARG2
+  ARG1 >= ARG2      ARG1 is greater than or equal to ARG2
+  ARG1 > ARG2       ARG1 is greater than ARG2
+
+  ARG1 + ARG2       arithmetic sum of ARG1 and ARG2
+  ARG1 - ARG2       arithmetic difference of ARG1 and ARG2
+
+  ARG1 * ARG2       arithmetic product of ARG1 and ARG2
+  ARG1 / ARG2       arithmetic quotient of ARG1 divided by ARG2
+  ARG1 % ARG2       arithmetic remainder of ARG1 divided by ARG2
+
+  STRING : REGEXP   anchored pattern match of REGEXP in STRING
+
+  match STRING REGEXP        same as STRING : REGEXP
+  substr STRING POS LENGTH   substring of STRING, POS counted from 1
+  index STRING CHARS         index in STRING where any CHARS is found, or 0
+  length STRING              length of STRING
+  + TOKEN                    interpret TOKEN as a string, even if it is a
+                               keyword like 'match' or an operator like '/'
+
+  ( EXPRESSION )             value of EXPRESSION
+
+Beware that many operators need to be escaped or quoted for shells.
+Comparisons are arithmetic if both ARGs are numbers, else lexicographical.
+Pattern matches return the string matched between \( and \) or null; if
+\( and \) are not used, they return the number of characters matched or 0.
+
+Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null
+or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/expr>
+or available locally via: info '(coreutils) expr invocation'
+student@T3:~/ajce/mca/mca$ 
+student@T3:~/ajce/mca/mca$ q
+
+Command 'q' not found, but can be installed with:
+
+snap install q                       # version 1.6.3-1, or
+apt  install python-q-text-as-data 
+apt  install python3-q-text-as-data
+
+See 'snap info q' for additional versions.
+
+student@T3:~/ajce/mca/mca$ q=anjali
+student@T3:~/ajce/mca/mca$ a=`expr length $q`
+student@T3:~/ajce/mca/mca$ echo $a
+6
+student@T3:~/ajce/mca/mca$ q=anjali ps
+  PID TTY          TIME CMD
+ 2498 pts/0    00:00:00 bash
+ 2986 pts/0    00:00:00 ps
+student@T3:~/ajce/mca/mca$ q= amal jyothy
+
+Command 'amal' not found, did you mean:
+
+  command 'amap' from deb amap-align
+
+Try: apt install <deb name>
+
+student@T3:~/ajce/mca/mca$ p=amal jyothy
+jyothy: command not found
+student@T3:~/ajce/mca/mca$ p=amaljyothy
+student@T3:~/ajce/mca/mca$ s=`expr substr $p 1 4`
+student@T3:~/ajce/mca/mca$ echo $s
+amal
+student@T3:~/ajce/mca/mca$ expr 12 - 8
+4
+student@T3:~/ajce/mca/mca$ expr 12 \* 8
+96
+student@T3:~/ajce/mca/mca$ EXPR 12 < 25
+bash: 25: No such file or directory
+student@T3:~/ajce/mca/mca$ EXPR 12 < 10
+bash: 10: No such file or directory
+student@T3:~/ajce/mca/mca$ READ A
+READ: command not found
+student@T3:~/ajce/mca/mca$ 20
+20: command not found
+student@T3:~/ajce/mca/mca$ READ B
+READ: command not found
+student@T3:~/ajce/mca/mca$ read a
+10
+student@T3:~/ajce/mca/mca$ read b
+5
+student@T3:~/ajce/mca/mca$ expr a \< b
+1
+student@T3:~/ajce/mca/mca$ expr b \< a
+0
+student@T3:~/ajce/mca/mca$ expr b \!= a
+1
+student@T3:~/ajce/mca/mca$ expr a \!= b
+1
+student@T3:~/ajce/mca/mca$ read a
+10
+student@T3:~/ajce/mca/mca$ read b
+10
+student@T3:~/ajce/mca/mca$ expr a \!= b
+1
+student@T3:~/ajce/mca/mca$ expr length  "geekss"  "<"  5  "&"  19  -  6  ">"  10
+0
+student@T3:~/ajce/mca/mca$ read q
+20
+student@T3:~/ajce/mca/mca$ read y
+10
+student@T3:~/ajce/mca/mca$ res=`expr $y = $q`
+student@T3:~/ajce/mca/mca$ echo $res
+0
+student@T3:~/ajce/mca/mca$ read q
+10
+student@T3:~/ajce/mca/mca$ read y
+10
+student@T3:~/ajce/mca/mca$ res=`expr $y = $q`
+student@T3:~/ajce/mca/mca$ echo $res
+1
+student@T3:~/ajce/mca/mca$ res=`expr $y \< $q`
+student@T3:~/ajce/mca/mca$ echo $res
+0
+student@T3:~/ajce/mca/mca$ read z=12
+bash: read: `z=12': not a valid identifier
+student@T3:~/ajce/mca/mca$ read z
+12
+student@T3:~/ajce/mca/mca$ read e
+12
+student@T3:~/ajce/mca/mca$ w=`expr $z \< $e`
+student@T3:~/ajce/mca/mca$ echo $w
+0
+student@T3:~/ajce/mca/mca$ w=`expr $z = $e`
+student@T3:~/ajce/mca/mca$ echo $w
+1
+student@T3:~/ajce/mca/mca$ read d
+25
+student@T3:~/ajce/mca/mca$ w=`expr $z \< $d`
+student@T3:~/ajce/mca/mca$ echo $w
+1
+student@T3:~/ajce/mca/mca$ w=`expr $d \< $z`
+student@T3:~/ajce/mca/mca$ echo $w
+0
+student@T3:~/ajce/mca/mca$ w=`expr $d != $z`
+student@T3:~/ajce/mca/mca$ echo $w
+1
+student@T3:~/ajce/mca/mca$ expr length "amaljyothicollegeofengineering"<" 5 "&" 19 - 6 ">"10
+> ^C
+student@T3:~/ajce/mca/mca$ expr length "geeks"
+

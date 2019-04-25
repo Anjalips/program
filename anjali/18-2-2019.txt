@@ -1,0 +1,181 @@
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ cd mca
+student@T3:~/ajce/mca/mca$ cd ar
+student@T3:~/ajce/mca/mca/ar$ cd am
+student@T3:~/ajce/mca/mca/ar/am$ cat anu.txt >> t.txt
+student@T3:~/ajce/mca/mca/ar/am$ ls
+aj  an  anu.txt  f4.txt  mmm  s1.txt  s.txt  t.txt
+student@T3:~/ajce/mca/mca/ar/am$ cat anu.txt >> t.txt
+student@T3:~/ajce/mca/mca/ar/am$ cat t.txt anu.txt
+amal jyothy
+kanjirappalli
+
+amal jyothy
+kanjirappalli
+
+amal jyothy
+kanjirappalli
+
+amal jyothy
+kanjirappalli
+
+student@T3:~/ajce/mca/mca/ar/am$ cat f4.txt anu.txt
+123
+147
+amal jyothy
+kanjirappalli
+
+student@T3:~/ajce/mca/mca/ar/am$ cat f4.txt t.txt
+123
+147
+amal jyothy
+kanjirappalli
+
+amal jyothy
+kanjirappalli
+
+amal jyothy
+kanjirappalli
+
+student@T3:~/ajce/mca/mca/ar/am$ paste -d anu.txt
+
+
+abc^C
+student@T3:~/ajce/mca/mca/ar/am$ cat >p1.txt
+welcome to amal jyothy
+^C
+student@T3:~/ajce/mca/mca/ar/am$ cat >p2.txt
+welcome to kanjirappalli
+^C
+student@T3:~/ajce/mca/mca/ar/am$ cat >p3.txt
+welcome to pala
+^C
+student@T3:~/ajce/mca/mca/ar/am$ 
+student@T3:~/ajce/mca/mca/ar/am$ paste p1.txt p2.txt
+welcome to amal jyothy	welcome to kanjirappalli
+student@T3:~/ajce/mca/mca/ar/am$ paste -d p1.txt p2.txt
+welcome to kanjirappalli
+student@T3:~/ajce/mca/mca/ar/am$ cat >place.txt
+idukki
+thookkupalam nedumkandam
+koottar
+thodupuzha
+pushpakandam
+^C
+student@T3:~/ajce/mca/mca/ar/am$ cat >name.txt
+anjali vishnu
+hari
+anju
+akhil
+anitta
+snobu
+^C
+student@T3:~/ajce/mca/mca/ar/am$ 
+student@T3:~/ajce/mca/mca/ar/am$ cat >number.txt
+1
+2
+3
+4
+^C
+student@T3:~/ajce/mca/mca/ar/am$ 
+student@T3:~/ajce/mca/mca/ar/am$ paste place.txt name.txt number.txt
+idukki	anjali vishnu	1
+thookkupalam nedumkandam	hari	2
+koottar	anju	3
+thodupuzha	akhil	4
+pushpakandam	anitta	
+	snobu	
+student@T3:~/ajce/mca/mca/ar/am$ paste -d "," name.txt number.txt
+anjali vishnu,1
+hari,2
+anju,3
+akhil,4
+anitta,
+snobu,
+student@T3:~/ajce/mca/mca/ar/am$ paste -s name.txt number.txt
+anjali vishnu	hari	anju	akhil	anitta	snobu
+1	2	3	4
+student@T3:~/ajce/mca/mca/ar/am$ paste -s-d ":" name.txt number.txt
+paste: invalid option -- '-'
+Try 'paste --help' for more information.
+student@T3:~/ajce/mca/mca/ar/am$ paste -s -d ":" name.txt number.txt
+anjali vishnu:hari:anju:akhil:anitta:snobu
+1:2:3:4
+student@T3:~/ajce/mca/mca/ar/am$ cat name.txt | paste --
+anjali vishnu
+hari
+anju
+akhil
+anitta
+snobu
+student@T3:~/ajce/mca/mca/ar/am$ cat name.txt | paste--
+paste--: command not found
+student@T3:~/ajce/mca/mca/ar/am$ cat name.txt | paste ---
+paste: unrecognized option '---'
+Try 'paste --help' for more information.
+student@T3:~/ajce/mca/mca/ar/am$ paste ---< name.txt
+paste: unrecognized option '---'
+Try 'paste --help' for more information.
+student@T3:~/ajce/mca/mca/ar/am$ paste ---<name.txt
+paste: unrecognized option '---'
+Try 'paste --help' for more information.
+student@T3:~/ajce/mca/mca/ar/am$ paste --- < name.txt
+paste: unrecognized option '---'
+Try 'paste --help' for more information.
+student@T3:~/ajce/mca/mca/ar/am$ paste --- <name.txt
+paste: unrecognized option '---'
+Try 'paste --help' for more information.
+student@T3:~/ajce/mca/mca/ar/am$ paste - - - < name.txt
+anjali vishnu	hari	anju
+akhil	anitta	snobu
+student@T3:~/ajce/mca/mca/ar/am$ paste -d "\," name.txt place.txt
+anjali vishnu,idukki
+hari,thookkupalam nedumkandam
+anju,koottar
+akhil,thodupuzha
+anitta,pushpakandam
+snobu,
+student@T3:~/ajce/mca/mca/ar/am$ paste - - -v name.txt
+paste: invalid option -- 'v'
+Try 'paste --help' for more information.
+student@T3:~/ajce/mca/mca/ar/am$ paste - - v name.txt
+paste: v: No such file or directory
+student@T3:~/ajce/mca/mca/ar/am$ paste --v name.txt
+paste (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by David M. Ihnat and David MacKenzie.
+student@T3:~/ajce/mca/mca/ar/am$ paste -d "/," name.txt number.txt
+anjali vishnu/1
+hari/2
+anju/3
+akhil/4
+anitta/
+snobu/
+student@T3:~/ajce/mca/mca/ar/am$ paste -d "/ ," name.txt number.txt
+anjali vishnu/1
+hari/2
+anju/3
+akhil/4
+anitta/
+snobu/
+student@T3:~/ajce/mca/mca/ar/am$ paste -d "/," name.txt number.txt
+anjali vishnu/1
+hari/2
+anju/3
+akhil/4
+anitta/
+snobu/
+student@T3:~/ajce/mca/mca/ar/am$ paste -d "/," name.txt number.txt place.txt
+anjali vishnu/1,idukki
+hari/2,thookkupalam nedumkandam
+anju/3,koottar
+akhil/4,thodupuzha
+anitta/,pushpakandam
+snobu/,
+student@T3:~/ajce/mca/mca/ar/am$ 
+

@@ -1,0 +1,131 @@
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca 
+student@T3:~/ajce/mca$ cd rmca 
+student@T3:~/ajce/mca/rmca$ cp ss.txt/home/ajce/mca/lemca/
+cp: missing destination file operand after 'ss.txt/home/ajce/mca/lemca/'
+Try 'cp --help' for more information.
+student@T3:~/ajce/mca/rmca$ cd >>
+bash: syntax error near unexpected token `newline'
+student@T3:~/ajce/mca/rmca$ cd ..
+student@T3:~/ajce/mca$ cd ..
+student@T3:~/ajce$ cd ..
+student@T3:~$ man cp
+student@T3:~$ cp ss.txt t.txt/home/ajce/mca/lemca/
+cp: cannot stat 'ss.txt': No such file or directory
+student@T3:~$ cp ss.txt t.txt/home/student/ajce/mca/lemca/
+cp: cannot stat 'ss.txt': No such file or directory
+student@T3:~$ pwd
+/home/student
+student@T3:~$ cp ss.txt t.txt/home/student/ajce/mca/intmca/
+cp: cannot stat 'ss.txt': No such file or directory
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ cd rmca
+student@T3:~/ajce/mca/rmca$ ls
+aa.txt  am     an        anu.txt  s1.txt  s.txt  t.txt~
+aj      amalj  anu1.txt  ar       ss.txt  t.txt
+student@T3:~/ajce/mca/rmca$ pwd
+/home/student/ajce/mca/rmca
+student@T3:~/ajce/mca/rmca$ cp aa.txt ^C
+student@T3:~/ajce/mca/rmca$ cp aa.txt home/student/ajce/mca/rmca/lemca/
+cp: cannot create regular file 'home/student/ajce/mca/rmca/lemca/': No such file or directory
+student@T3:~/ajce/mca/rmca$ pwd
+/home/student/ajce/mca/rmca
+student@T3:~/ajce/mca/rmca$ cp aa.txt home/student/ajce/mca/rmca/intmca/
+cp: cannot create regular file 'home/student/ajce/mca/rmca/intmca/': No such file or directory
+student@T3:~/ajce/mca/rmca$ cp aa.txt home/student/ajce/mca/rmca/intmca/dmca/
+cp: cannot create regular file 'home/student/ajce/mca/rmca/intmca/dmca/': No such file or directory
+student@T3:~/ajce/mca/rmca$ cp aa.txt /home/student/ajce/mca/rmca/intmca/dmca/
+cp: cannot create regular file '/home/student/ajce/mca/rmca/intmca/dmca/': No such file or directory
+student@T3:~/ajce/mca/rmca$ cp aa.txt /home/student/ajce/mca/rmca/intmca/dmca/
+cp: cannot create regular file '/home/student/ajce/mca/rmca/intmca/dmca/': No such file or directory
+student@T3:~/ajce/mca/rmca$ cp ss.txt /home/student/ajce/mca/intmca/
+student@T3:~/ajce/mca/rmca$ ls
+aa.txt  am     an        anu.txt  s1.txt  s.txt  t.txt~
+aj      amalj  anu1.txt  ar       ss.txt  t.txt
+student@T3:~/ajce/mca/rmca$ cd ~
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ mv f.txt rmca
+student@T3:~/ajce/mca$ mv rmca lemca
+student@T3:~/ajce/mca$ mv s.txt ajce
+student@T3:~/ajce/mca$ mv lemca mca
+student@T3:~/ajce/mca$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T3:~/ajce/mca$ cd mca
+student@T3:~/ajce/mca/mca$ cd rmca
+student@T3:~/ajce/mca/mca/rmca$ rm s.txt
+student@T3:~/ajce/mca/mca/rmca$ ls
+aa.txt  am     an        anu.txt  f.txt   ss.txt  t.txt~
+aj      amalj  anu1.txt  ar       s1.txt  t.txt
+student@T3:~/ajce/mca/mca/rmca$ rm s1.txt anu.txt
+student@T3:~/ajce/mca/mca/rmca$ mv ar an
+student@T3:~/ajce/mca/mca/rmca$ mv an amalj
+mv: cannot overwrite non-directory 'amalj' with directory 'an'
+student@T3:~/ajce/mca/mca/rmca$ mv aa.txt ar
+student@T3:~/ajce/mca/mca/rmca$ cd ..
+student@T3:~/ajce/mca/mca$ cd mca
+bash: cd: mca: No such file or directory
+student@T3:~/ajce/mca/mca$ cd rmca
+student@T3:~/ajce/mca/mca/rmca$ ls
+aj  am  amalj  an  anu1.txt  ar  f.txt  ss.txt  t.txt  t.txt~
+student@T3:~/ajce/mca/mca/rmca$ mv am ar
+mv: cannot overwrite non-directory 'ar' with directory 'am'
+student@T3:~/ajce/mca/mca/rmca$ cd ..
+student@T3:~/ajce/mca/mca$ mv dmca rmca > aaa
+student@T3:~/ajce/mca/mca$ mv  rmca > aaa
+mv: missing destination file operand after 'rmca'
+Try 'mv --help' for more information.
+student@T3:~/ajce/mca/mca$ mkdir mmm
+student@T3:~/ajce/mca/mca$ mkdir mmmm
+student@T3:~/ajce/mca/mca$ mv mmm mmmm rmca
+student@T3:~/ajce/mca/mca$ mv rmca ar
+student@T3:~/ajce/mca/mca$ man rm
+student@T3:~/ajce/mca/mca$ mv -i
+mv: missing file operand
+Try 'mv --help' for more information.
+student@T3:~/ajce/mca/mca$ cd ar
+student@T3:~/ajce/mca/mca/ar$ mv -i t.txt
+mv: missing destination file operand after 't.txt'
+Try 'mv --help' for more information.
+student@T3:~/ajce/mca/mca/ar$ rm -i t.txt
+rm: remove regular file 't.txt'? yes
+student@T3:~/ajce/mca/mca/ar$ rm -I t.txt anu1.txt ar.txt ss.txt 
+rm: remove 4 arguments? no
+student@T3:~/ajce/mca/mca/ar$ rm -I t.txt anu1.txt ar.txt ss.txt 
+rm: remove 4 arguments? yes
+rm: cannot remove 't.txt': No such file or directory
+rm: cannot remove 'ar.txt': No such file or directory
+student@T3:~/ajce/mca/mca/ar$ man rm
+student@T3:~/ajce/mca/mca/ar$ man rm
+student@T3:~/ajce/mca/mca/ar$ mv -R an
+mv: invalid option -- 'R'
+Try 'mv --help' for more information.
+student@T3:~/ajce/mca/mca/ar$ mv -R --an
+mv: invalid option -- 'R'
+Try 'mv --help' for more information.
+student@T3:~/ajce/mca/mca/ar$ mv -R f.txt
+mv: invalid option -- 'R'
+Try 'mv --help' for more information.
+student@T3:~/ajce/mca/mca/ar$ man rm
+student@T3:~/ajce/mca/mca/ar$ rm -q dmca
+rm: invalid option -- 'q'
+Try 'rm --help' for more information.
+student@T3:~/ajce/mca/mca/ar$ rm -d mmm
+student@T3:~/ajce/mca/mca/ar$ ls
+aj  am  amalj  an  ar  dmca  f.txt  mmmm  t.txt~
+student@T3:~/ajce/mca/mca/ar$ rm -d dmca
+student@T3:~/ajce/mca/mca/ar$ rm -R aj
+student@T3:~/ajce/mca/mca/ar$ rm -d am
+rm: cannot remove 'am': Directory not empty
+student@T3:~/ajce/mca/mca/ar$ cd ar
+bash: cd: ar: Not a directory
+student@T3:~/ajce/mca/mca/ar$ cd an
+student@T3:~/ajce/mca/mca/ar/an$ cd ar
+student@T3:~/ajce/mca/mca/ar/an/ar$ rm s1.txt
+student@T3:~/ajce/mca/mca/ar/an/ar$ cd ..
+student@T3:~/ajce/mca/mca/ar/an$ rm s.txt
+rm: cannot remove 's.txt': No such file or directory
+student@T3:~/ajce/mca/mca/ar/an$ cd ar
+student@T3:~/ajce/mca/mca/ar/an/ar$ cat > 
+

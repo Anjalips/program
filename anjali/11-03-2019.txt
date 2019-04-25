@@ -1,0 +1,744 @@
+student@T3:~/ajce/mca/mca/ar$ find ./am
+./am
+./am/p2.txt
+./am/anu.txt
+./am/an
+./am/p1.txt
+./am/number.txt
+./am/s.txt
+./am/t.txt
+./am/place.txt
+./am/name.txt
+./am/s1.txt
+./am/f4.txt
+./am/aj
+./am/p3.txt
+./am/mmm
+student@T3:~/ajce/mca/mca/ar$ find ./-name am
+find: ‘./-name’: No such file or directory
+am
+am/p2.txt
+am/anu.txt
+am/an
+am/p1.txt
+am/number.txt
+am/s.txt
+am/t.txt
+am/place.txt
+am/name.txt
+am/s1.txt
+am/f4.txt
+am/aj
+am/p3.txt
+am/mmm
+student@T3:~/ajce/mca/mca/ar$ cat >GFG
+^C
+student@T3:~/ajce/mca/mca/ar$ cat >demo1
+^C
+student@T3:~/ajce/mca/mca/ar$ cat >demo2
+^C
+student@T3:~/ajce/mca/mca/ar$ cat >sample.txt
+anjali
+^C
+student@T3:~/ajce/mca/mca/ar$ cat >demo3
+^C
+student@T3:~/ajce/mca/mca/ar$ find ./GFG -name sample.txt
+student@T3:~/ajce/mca/mca/ar$ cd GFG
+bash: cd: GFG: Not a directory
+student@T3:~/ajce/mca/mca/ar$ mkdir GFG
+mkdir: cannot create directory ‘GFG’: File exists
+student@T3:~/ajce/mca/mca/ar$ mkdir gfg
+student@T3:~/ajce/mca/mca/ar$ cd gfg
+student@T3:~/ajce/mca/mca/ar/gfg$ cat >demo1
+^C
+student@T3:~/ajce/mca/mca/ar/gfg$ cat >demo2
+^C
+student@T3:~/ajce/mca/mca/ar/gfg$ cat >sample.txt
+anjali
+^C
+student@T3:~/ajce/mca/mca/ar/gfg$ cat >demo3
+^C
+student@T3:~/ajce/mca/mca/ar/gfg$ find ./gfg -name sample.txt
+find: ‘./gfg’: No such file or directory
+student@T3:~/ajce/mca/mca/ar/gfg$ find ./gfg -name sample.txt
+find: ‘./gfg’: No such file or directory
+student@T3:~/ajce/mca/mca/ar/gfg$ cd /
+student@T3:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T3:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T3:/$ cd ~
+student@T3:~$ cd ajce
+student@T3:~/ajce$ find ./gfg -name sample.txt
+find: ‘./gfg’: No such file or directory
+student@T3:~/ajce$ find ./gfg -name sample.txt
+find: ‘./gfg’: No such file or directory
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ cd mca
+student@T3:~/ajce/mca/mca$ cd ar
+student@T3:~/ajce/mca/mca/ar$ find ./gfg -name sample.txt
+./gfg/sample.txt
+student@T3:~/ajce/mca/mca/ar$ find ~ -name sample.txt
+/home/student/ajce/mca/mca/ar/gfg/sample.txt
+/home/student/.local/share/Trash/files/sample.txt
+student@T3:~/ajce/mca/mca/ar$ find ./gfg -name&*.txt
+[1] 3451
+find: missing argument to `-name'
+anjali.txt: command not found
+[1]+  Exit 1                  find ./gfg -name
+student@T3:~/ajce/mca/mca/ar$ find ./gfg -name*.txt
+find: unknown predicate `-name*.txt'
+student@T3:~/ajce/mca/mca/ar$ find ./gfg -name *.txt
+find: paths must precede expression: `capital.txt'
+find: possible unquoted pattern after predicate `-name'?
+student@T3:~/ajce/mca/mca/ar$ find ./gfg -name "*.txt"
+./gfg/sample.txt
+student@T3:~/ajce/mca/mca/ar$ find ./gfg -perm 664
+student@T3:~/ajce/mca/mca/ar$ cd ~
+student@T3:~$ find ./ajce -perm 777
+student@T3:~$ cd ~
+student@T3:~$ find -perm 777
+./order.sh
+./banking.sh
+./pyr.sh
+./bank.sh
+./aby/student.sh.save
+./aby/student.sh
+./aby/mark.sh
+./print.sh
+./check.sh
+./snap/pycharm-community/current
+./snap/vlc/common/.cache/gio-modules/libgiolibproxy.so
+./snap/vlc/common/.cache/gio-modules/libdconfsettings.so
+./snap/vlc/common/.cache/gio-modules/libgiognutls.so
+./snap/vlc/common/.cache/gio-modules/libgiognomeproxy.so
+./snap/vlc/current
+./snap/vlc/770/.themes
+./snap/vlc/770/.config/gtk-2.0/gtkfilechooser.ini
+./snap/vlc/770/.config/dconf/user
+./snap/vlc/770/.config/ibus/bus
+./snap/vlc/770/.config/gtk-3.0/bookmarks
+./snap/vlc/770/.config/gtk-3.0/settings.ini
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.wm.keybindings.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.thumbnail-cache.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.applications.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.system.location.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.lockdown.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.notifications.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.session.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.default-applications.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.app-folders.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.enums.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.datetime.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.media-handling.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/10_gsettings-desktop-schemas.gschema.override
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.search-providers.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gtk.Settings.ColorChooser.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.system.locale.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.input-sources.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.mouse.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.system.proxy.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.thumbnailers.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.wm.preferences.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.privacy.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.keyboard.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/10_libgtk-3-common.gschema.override
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.magnifier.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.peripherals.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.background.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.sound.gschema.xml
+./snap/vlc/770/.local/share/themes
+./snap/vlc/770/.local/share/icons/Humanity-Dark/COPYING
+./snap/vlc/770/.local/share/icons/Humanity-Dark/actions@2
+./snap/vlc/770/.local/share/icons/Humanity-Dark/actions
+./snap/vlc/770/.local/share/icons/Humanity-Dark/AUTHORS
+./snap/vlc/770/.local/share/icons/Humanity-Dark/places
+./snap/vlc/770/.local/share/icons/Humanity-Dark/places@2
+./snap/vlc/770/.local/share/icons/Humanity-Dark/index.theme
+./snap/vlc/770/.local/share/icons/Humanity-Dark/devices
+./snap/vlc/770/.local/share/icons/Humanity-Dark/apps
+./snap/vlc/770/.local/share/icons/Humanity-Dark/devices@2
+./snap/vlc/770/.local/share/icons/Humanity-Dark/status@2
+./snap/vlc/770/.local/share/icons/Humanity-Dark/status
+./snap/vlc/770/.local/share/icons/Humanity-Dark/apps@2
+./snap/vlc/770/.local/share/icons/Humanity/COPYING
+./snap/vlc/770/.local/share/icons/Humanity/actions@2
+./snap/vlc/770/.local/share/icons/Humanity/mimes
+./snap/vlc/770/.local/share/icons/Humanity/actions
+./snap/vlc/770/.local/share/icons/Humanity/AUTHORS
+./snap/vlc/770/.local/share/icons/Humanity/mimes@2
+./snap/vlc/770/.local/share/icons/Humanity/places
+./snap/vlc/770/.local/share/icons/Humanity/places@2
+./snap/vlc/770/.local/share/icons/Humanity/index.theme
+./snap/vlc/770/.local/share/icons/Humanity/CONTRIBUTORS
+./snap/vlc/770/.local/share/icons/Humanity/stock@2
+./snap/vlc/770/.local/share/icons/Humanity/devices
+./snap/vlc/770/.local/share/icons/Humanity/emblems
+./snap/vlc/770/.local/share/icons/Humanity/apps
+./snap/vlc/770/.local/share/icons/Humanity/emblems@2
+./snap/vlc/770/.local/share/icons/Humanity/categories@2
+./snap/vlc/770/.local/share/icons/Humanity/devices@2
+./snap/vlc/770/.local/share/icons/Humanity/status@2
+./snap/vlc/770/.local/share/icons/Humanity/categories
+./snap/vlc/770/.local/share/icons/Humanity/stock
+./snap/vlc/770/.local/share/icons/Humanity/animations@2
+./snap/vlc/770/.local/share/icons/Humanity/animations
+./snap/vlc/770/.local/share/icons/Humanity/status
+./snap/vlc/770/.local/share/icons/Humanity/apps@2
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/mimes
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/actions
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/places
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/index.theme
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/apps
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/categories
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/stock
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/animations
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/status
+./snap/vlc/770/.local/share/icons/breeze-dark/actions
+./snap/vlc/770/.local/share/icons/breeze-dark/places
+./snap/vlc/770/.local/share/icons/breeze-dark/mimetypes
+./snap/vlc/770/.local/share/icons/breeze-dark/index.theme
+./snap/vlc/770/.local/share/icons/breeze-dark/devices
+./snap/vlc/770/.local/share/icons/breeze-dark/applets
+./snap/vlc/770/.local/share/icons/breeze-dark/emblems
+./snap/vlc/770/.local/share/icons/breeze-dark/apps
+./snap/vlc/770/.local/share/icons/breeze-dark/categories
+./snap/vlc/770/.local/share/icons/breeze-dark/emotes
+./snap/vlc/770/.local/share/icons/breeze-dark/animations
+./snap/vlc/770/.local/share/icons/breeze-dark/preferences
+./snap/vlc/770/.local/share/icons/breeze-dark/status
+./snap/vlc/770/.local/share/icons/LoginIcons/index.theme
+./snap/vlc/770/.local/share/icons/LoginIcons/apps
+./snap/vlc/770/.local/share/icons/DMZ-Black/index.theme
+./snap/vlc/770/.local/share/icons/DMZ-Black/cursors
+./snap/vlc/770/.local/share/icons/DMZ-Black/cursor.theme
+./snap/vlc/770/.local/share/icons/DMZ-White/index.theme
+./snap/vlc/770/.local/share/icons/DMZ-White/cursors
+./snap/vlc/770/.local/share/icons/DMZ-White/cursor.theme
+./snap/vlc/770/.local/share/icons/breeze/actions
+./snap/vlc/770/.local/share/icons/breeze/places
+./snap/vlc/770/.local/share/icons/breeze/mimetypes
+./snap/vlc/770/.local/share/icons/breeze/index.theme
+./snap/vlc/770/.local/share/icons/breeze/devices
+./snap/vlc/770/.local/share/icons/breeze/applets
+./snap/vlc/770/.local/share/icons/breeze/emblems
+./snap/vlc/770/.local/share/icons/breeze/apps
+./snap/vlc/770/.local/share/icons/breeze/categories
+./snap/vlc/770/.local/share/icons/breeze/emotes
+./snap/vlc/770/.local/share/icons/breeze/animations
+./snap/vlc/770/.local/share/icons/breeze/preferences
+./snap/vlc/770/.local/share/icons/breeze/status
+./snap/vlc/770/.local/share/icons/hicolor/512x512
+./snap/vlc/770/.local/share/icons/hicolor/128x128
+./snap/vlc/770/.local/share/icons/hicolor/192x192
+./snap/vlc/770/.local/share/icons/hicolor/scalable
+./snap/vlc/770/.local/share/icons/hicolor/index.theme
+./snap/vlc/770/.local/share/icons/hicolor/72x72
+./snap/vlc/770/.local/share/icons/hicolor/16x16
+./snap/vlc/770/.local/share/icons/hicolor/256x256
+./snap/vlc/770/.local/share/icons/hicolor/48x48
+./snap/vlc/770/.local/share/icons/hicolor/96x96
+./snap/vlc/770/.local/share/icons/hicolor/22x22
+./snap/vlc/770/.local/share/icons/hicolor/24x24
+./snap/vlc/770/.local/share/icons/hicolor/64x64
+./snap/vlc/770/.local/share/icons/hicolor/symbolic
+./snap/vlc/770/.local/share/icons/hicolor/36x36
+./snap/vlc/770/.local/share/icons/hicolor/32x32
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/mimes
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/actions
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/places
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/index.theme
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/apps
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/categories
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/stock
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/animations
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/status
+./snap/gnome-calculator/common/.cache/gio-modules/libgiolibproxy.so
+./snap/gnome-calculator/common/.cache/gio-modules/libdconfsettings.so
+./snap/gnome-calculator/common/.cache/gio-modules/libgiognutls.so
+./snap/gnome-calculator/common/.cache/gio-modules/libgiognomeproxy.so
+./snap/gnome-calculator/common/.cache/immodules/im-ibus.so
+./snap/gnome-calculator/common/.cache/immodules/im-broadway.so
+./snap/gnome-calculator/common/.cache/immodules/im-cedilla.so
+./snap/gnome-calculator/common/.cache/immodules/im-cyrillic-translit.so
+./snap/gnome-calculator/common/.cache/immodules/im-ti-er.so
+./snap/gnome-calculator/common/.cache/immodules/im-multipress.so
+./snap/gnome-calculator/common/.cache/immodules/im-am-et.so
+./snap/gnome-calculator/common/.cache/immodules/im-fcitx.so
+./snap/gnome-calculator/common/.cache/immodules/im-ipa.so
+./snap/gnome-calculator/common/.cache/immodules/im-thai.so
+./snap/gnome-calculator/common/.cache/immodules/im-ti-et.so
+./snap/gnome-calculator/common/.cache/immodules/im-viqr.so
+./snap/gnome-calculator/common/.cache/immodules/im-inuktitut.so
+./snap/gnome-calculator/common/.cache/immodules/im-xim.so
+./snap/gnome-calculator/current
+./snap/gnome-calculator/260/.themes
+./snap/gnome-calculator/260/.config/gtk-2.0/gtkfilechooser.ini
+./snap/gnome-calculator/260/.config/dconf/user
+./snap/gnome-calculator/260/.config/ibus/bus
+./snap/gnome-calculator/260/.config/gtk-3.0/bookmarks
+./snap/gnome-calculator/260/.config/gtk-3.0/settings.ini
+./snap/gnome-calculator/260/.local/share/glib-2.0/schemas/org.gnome.calculator.gschema.xml
+./snap/gnome-calculator/260/.local/share/themes
+./snap/gnome-calculator/260/.local/share/icons/DMZ-Black/index.theme
+./snap/gnome-calculator/260/.local/share/icons/DMZ-Black/cursors
+./snap/gnome-calculator/260/.local/share/icons/DMZ-Black/cursor.theme
+./snap/gnome-calculator/260/.local/share/icons/DMZ-White/index.theme
+./snap/gnome-calculator/260/.local/share/icons/DMZ-White/cursors
+./snap/gnome-calculator/260/.local/share/icons/DMZ-White/cursor.theme
+./snap/gnome-calculator/260/.local/share/icons/hicolor/512x512
+./snap/gnome-calculator/260/.local/share/icons/hicolor/128x128
+./snap/gnome-calculator/260/.local/share/icons/hicolor/192x192
+./snap/gnome-calculator/260/.local/share/icons/hicolor/scalable
+./snap/gnome-calculator/260/.local/share/icons/hicolor/index.theme
+./snap/gnome-calculator/260/.local/share/icons/hicolor/72x72
+./snap/gnome-calculator/260/.local/share/icons/hicolor/16x16
+./snap/gnome-calculator/260/.local/share/icons/hicolor/256x256
+./snap/gnome-calculator/260/.local/share/icons/hicolor/48x48
+./snap/gnome-calculator/260/.local/share/icons/hicolor/96x96
+./snap/gnome-calculator/260/.local/share/icons/hicolor/22x22
+./snap/gnome-calculator/260/.local/share/icons/hicolor/24x24
+./snap/gnome-calculator/260/.local/share/icons/hicolor/64x64
+./snap/gnome-calculator/260/.local/share/icons/hicolor/symbolic
+./snap/gnome-calculator/260/.local/share/icons/hicolor/36x36
+./snap/gnome-calculator/260/.local/share/icons/hicolor/32x32
+./.mozilla/firefox/gg06bael.default/lock
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ find ./mca -name *.txt
+./mca/cut.txt
+./mca/ar/am/p2.txt
+./mca/ar/am/anu.txt
+./mca/ar/am/p1.txt
+./mca/ar/am/number.txt
+./mca/ar/am/s.txt
+./mca/ar/am/t.txt
+./mca/ar/am/place.txt
+./mca/ar/am/name.txt
+./mca/ar/am/s1.txt
+./mca/ar/am/f4.txt
+./mca/ar/am/p3.txt
+./mca/ar/anjali.txt
+./mca/ar/name1.txt
+./mca/ar/an/ar/s.txt
+./mca/ar/an/f3.txt
+./mca/ar/state.txt
+./mca/ar/capital.txt
+./mca/ar/number.txt
+./mca/ar/file.txt
+./mca/ar/f2.txt
+./mca/ar/gfg/sample.txt
+./mca/ar/file7.txt
+./mca/ar/file2.txt
+./mca/ar/f1.txt
+student@T3:~/ajce/mca$ find ./gfg -empty
+find: ‘./gfg’: No such file or directory
+student@T3:~/ajce/mca$ cd mca
+student@T3:~/ajce/mca/mca$ find ./gfg -empty
+find: ‘./gfg’: No such file or directory
+student@T3:~/ajce/mca/mca$ cd ar
+student@T3:~/ajce/mca/mca/ar$ find ./gfg -empty
+./gfg/demo1
+./gfg/demo2
+./gfg/demo3
+student@T3:~/ajce/mca/mca/ar$ find ./ -type f -name "*.txt" -exec 'anjali' {} \;
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+find: ‘anjali’: No such file or directory
+student@T3:~/ajce/mca/mca/ar$ find ./ -type f -name "*.txt" -exec 'sample' {} \;
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+find: ‘sample’: No such file or directory
+student@T3:~/ajce/mca/mca/ar$ find ~ -name mca
+/home/student/ajce/mca
+/home/student/ajce/mca/mca
+student@T3:~/ajce/mca/mca/ar$ find/home -name ar
+bash: find/home: No such file or directory
+student@T3:~/ajce/mca/mca/ar$ find/home -name mca
+bash: find/home: No such file or directory
+student@T3:~/ajce/mca/mca/ar$ find/home -name ajce
+bash: find/home: No such file or directory
+student@T3:~/ajce/mca/mca/ar$ cd ~
+student@T3:~$ find/home -name ajce
+bash: find/home: No such file or directory
+student@T3:~$ cd /
+student@T3:/$ find/home -name ajce
+bash: find/home: No such file or directory
+student@T3:/$ cd ~
+student@T3:~$ cd mca
+bash: cd: mca: No such file or directory
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ cd mca
+student@T3:~/ajce/mca/mca$ cd ar
+student@T3:~/ajce/mca/mca/ar$ find ~ -iname sample.txt
+/home/student/ajce/mca/mca/ar/gfg/sample.txt
+/home/student/.local/share/Trash/files/sample.txt
+student@T3:~/ajce/mca/mca/ar$ find / -type d -name gfg
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-systemd-timesyncd.service-nnvxxf’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-bolt.service-S4NGpi’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-fwupd.service-FXTwVP’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-colord.service-uRmoP9’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-systemd-resolved.service-DzRfhC’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-rtkit-daemon.service-kUXNRT’: Permission denied
+^C
+student@T3:~/ajce/mca/mca/ar$ find / -type f -name gfg
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-systemd-timesyncd.service-nnvxxf’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-bolt.service-S4NGpi’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-fwupd.service-FXTwVP’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-colord.service-uRmoP9’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-systemd-resolved.service-DzRfhC’: Permission denied
+find: ‘/tmp/systemd-private-2b285a382ee8444dac33a380e80b99f9-rtkit-daemon.service-kUXNRT’: Permission denied
+^C
+student@T3:~/ajce/mca/mca/ar$ cd mca
+bash: cd: mca: No such file or directory
+student@T3:~/ajce/mca/mca/ar$ cd ..
+student@T3:~/ajce/mca/mca$ tar -czvf name-of-archive.tar.gz ar
+ar/
+ar/am/
+ar/am/p2.txt
+ar/am/anu.txt
+ar/am/an/
+ar/am/p1.txt
+ar/am/number.txt
+ar/am/s.txt
+ar/am/t.txt
+ar/am/place.txt
+ar/am/name.txt
+ar/am/s1.txt
+ar/am/f4.txt
+ar/am/aj/
+ar/am/p3.txt
+ar/am/mmm
+ar/anjali.txt
+ar/name1.txt
+ar/an/
+ar/an/ar/
+ar/an/ar/s.txt
+ar/an/f3.txt
+ar/state.txt
+ar/mmmm/
+ar/mmmm/ar
+ar/capital.txt
+ar/number.txt
+ar/file.txt
+ar/GFG
+ar/t.txt~
+ar/f2.txt
+ar/gfg/
+ar/gfg/demo1
+ar/gfg/demo2
+ar/gfg/demo3
+ar/gfg/sample.txt
+ar/file7.txt
+ar/file2.txt
+ar/f1.txt
+student@T3:~/ajce/mca/mca$ tar cvf file.tar *.txt
+cut.txt
+student@T3:~/ajce/mca/mca$ tar xvf file.tar 
+cut.txt
+student@T3:~/ajce/mca/mca$ tar cvzf file.tar.gz *.txt 
+cut.txt
+student@T3:~/ajce/mca/mca$ tar xvzf file.tar.gz  
+cut.txt
+student@T3:~/ajce/mca/mca$ tar rvf file.tar *.c
+tar: *.c: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+student@T3:~/ajce/mca/mca$ tar rvf file.tar *.txt
+cut.txt
+student@T3:~/ajce/mca/mca$ tar rvf sample.tar *.txt
+cut.txt
+student@T3:~/ajce/mca/mca$ tar -xzvf archive.tar.gz
+tar (child): archive.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+student@T3:~/ajce/mca/mca$ tar -xzvf file.tar.gz
+cut.txt
+student@T3:~/ajce/mca/mca$ ls
+aaa  cut.txt   file.tar.gz             sample.tar
+ar   file.tar  name-of-archive.tar.gz
+student@T3:~/ajce/mca/mca$ cat >f1.c
+^C
+student@T3:~/ajce/mca/mca$ cat >f2.c
+^C
+student@T3:~/ajce/mca/mca$ cat >f3.c
+^C
+student@T3:~/ajce/mca/mca$ 
+student@T3:~/ajce/mca/mca$ tar -czvf f123.tar.gz *.c
+f1.c
+f2.c
+f3.c
+student@T3:~/ajce/mca/mca$ tar -xzvf archive.tar.gz
+tar (child): archive.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+student@T3:~/ajce/mca/mca$ tar -xzvf f123.tar.gz
+f1.c
+f2.c
+f3.c
+student@T3:~/ajce/mca/mca$ tar -czvf f123.tar.gz  ar
+ar/
+ar/am/
+ar/am/p2.txt
+ar/am/anu.txt
+ar/am/an/
+ar/am/p1.txt
+ar/am/number.txt
+ar/am/s.txt
+ar/am/t.txt
+ar/am/place.txt
+ar/am/name.txt
+ar/am/s1.txt
+ar/am/f4.txt
+ar/am/aj/
+ar/am/p3.txt
+ar/am/mmm
+ar/anjali.txt
+ar/name1.txt
+ar/an/
+ar/an/ar/
+ar/an/ar/s.txt
+ar/an/f3.txt
+ar/state.txt
+ar/mmmm/
+ar/mmmm/ar
+ar/capital.txt
+ar/number.txt
+ar/file.txt
+ar/GFG
+ar/t.txt~
+ar/f2.txt
+ar/gfg/
+ar/gfg/demo1
+ar/gfg/demo2
+ar/gfg/demo3
+ar/gfg/sample.txt
+ar/file7.txt
+ar/file2.txt
+ar/f1.txt
+student@T3:~/ajce/mca/mca$ tar -czvf f123.tar.gz  ar *.c
+ar/
+ar/am/
+ar/am/p2.txt
+ar/am/anu.txt
+ar/am/an/
+ar/am/p1.txt
+ar/am/number.txt
+ar/am/s.txt
+ar/am/t.txt
+ar/am/place.txt
+ar/am/name.txt
+ar/am/s1.txt
+ar/am/f4.txt
+ar/am/aj/
+ar/am/p3.txt
+ar/am/mmm
+ar/anjali.txt
+ar/name1.txt
+ar/an/
+ar/an/ar/
+ar/an/ar/s.txt
+ar/an/f3.txt
+ar/state.txt
+ar/mmmm/
+ar/mmmm/ar
+ar/capital.txt
+ar/number.txt
+ar/file.txt
+ar/GFG
+ar/t.txt~
+ar/f2.txt
+ar/gfg/
+ar/gfg/demo1
+ar/gfg/demo2
+ar/gfg/demo3
+ar/gfg/sample.txt
+ar/file7.txt
+ar/file2.txt
+ar/f1.txt
+f1.c
+f2.c
+f3.c
+student@T3:~/ajce/mca/mca$ ls
+aaa  cut.txt      f1.c  f3.c      file.tar.gz             sample.tar
+ar   f123.tar.gz  f2.c  file.tar  name-of-archive.tar.gz
+student@T3:~/ajce/mca/mca$ tar -xzvf f123.tar.gz
+ar/
+ar/am/
+ar/am/p2.txt
+ar/am/anu.txt
+ar/am/an/
+ar/am/p1.txt
+ar/am/number.txt
+ar/am/s.txt
+ar/am/t.txt
+ar/am/place.txt
+ar/am/name.txt
+ar/am/s1.txt
+ar/am/f4.txt
+ar/am/aj/
+ar/am/p3.txt
+ar/am/mmm
+ar/anjali.txt
+ar/name1.txt
+ar/an/
+ar/an/ar/
+ar/an/ar/s.txt
+ar/an/f3.txt
+ar/state.txt
+ar/mmmm/
+ar/mmmm/ar
+ar/capital.txt
+ar/number.txt
+ar/file.txt
+ar/GFG
+ar/t.txt~
+ar/f2.txt
+ar/gfg/
+ar/gfg/demo1
+ar/gfg/demo2
+ar/gfg/demo3
+ar/gfg/sample.txt
+ar/file7.txt
+ar/file2.txt
+ar/f1.txt
+f1.c
+f2.c
+f3.c
+student@T3:~/ajce/mca/mca$ cd 123
+student@T3:~/ajce/mca/mca/123$ tar -xzvf f123.tar.gz
+ar/
+ar/am/
+ar/am/p2.txt
+ar/am/anu.txt
+ar/am/an/
+ar/am/p1.txt
+ar/am/number.txt
+ar/am/s.txt
+ar/am/t.txt
+ar/am/place.txt
+ar/am/name.txt
+ar/am/s1.txt
+ar/am/f4.txt
+ar/am/aj/
+ar/am/p3.txt
+ar/am/mmm
+ar/anjali.txt
+ar/name1.txt
+ar/an/
+ar/an/ar/
+ar/an/ar/s.txt
+ar/an/f3.txt
+ar/state.txt
+ar/mmmm/
+ar/mmmm/ar
+ar/capital.txt
+ar/number.txt
+ar/file.txt
+ar/GFG
+ar/t.txt~
+ar/f2.txt
+ar/gfg/
+ar/gfg/demo1
+ar/gfg/demo2
+ar/gfg/demo3
+ar/gfg/sample.txt
+ar/file7.txt
+ar/file2.txt
+ar/f1.txt
+f1.c
+f2.c
+f3.c
+student@T3:~/ajce/mca/mca/123$ tar -czvf f124.tar.gz  ar *.c
+ar/
+ar/am/
+ar/am/p2.txt
+ar/am/anu.txt
+ar/am/an/
+ar/am/p1.txt
+ar/am/number.txt
+ar/am/s.txt
+ar/am/t.txt
+ar/am/place.txt
+ar/am/name.txt
+ar/am/s1.txt
+ar/am/f4.txt
+ar/am/aj/
+ar/am/p3.txt
+ar/am/mmm
+ar/anjali.txt
+ar/name1.txt
+ar/an/
+ar/an/ar/
+ar/an/ar/s.txt
+ar/an/f3.txt
+ar/state.txt
+ar/mmmm/
+ar/mmmm/ar
+ar/capital.txt
+ar/number.txt
+ar/file.txt
+ar/GFG
+ar/t.txt~
+ar/f2.txt
+ar/gfg/
+ar/gfg/demo1
+ar/gfg/demo2
+ar/gfg/demo3
+ar/gfg/sample.txt
+ar/file7.txt
+ar/file2.txt
+ar/f1.txt
+f1.c
+f2.c
+f3.c
+student@T3:~/ajce/mca/mca/123$ 
+

@@ -1,0 +1,71 @@
+
+1.ARGUMENT
+
+echo -e " enter two number:"
+read a
+read b
+if [ $a -eq $b ]
+then
+echo "equal numbers"
+elif [ $a -lt $b ]
+then
+echo "b is largest"
+else
+echo "a is largest"
+fi
+
+
+2.ODD OR EVEN
+
+echo  "Enter numnber : "
+read n
+ 
+a=$(( $n % 2 ))
+ 
+if [ $a -eq 0 ]
+then
+  echo "$n is even number"
+else
+  echo "$n is odd number"
+fi
+
+
+
+
+4.leap
+
+echo "Enter Year:"
+read a
+
+if (( $a % 4 ==0 ))
+
+then
+	echo "$a is Leap Year!"
+else
+	echo "$a is not a Leap Year!"
+fi
+
+5.mul
+echo "enter a number"
+read n
+for (( i=1; i<=10; i++ ))
+do
+a=$(( $i * $n))
+echo "$i * $n= $a"
+
+done 
+6.reverse
+
+echo "enter a number"
+read a
+rev=0
+sd=0
+or=$a
+while [ $a -gt 0 ]
+do
+sd=`expr $a % 10`
+temp=`expr $rev \* 10`
+rev=`expr $temp + $sd`
+a=`expr $a / 10`
+done
+echo "reverse of $or is $rev"

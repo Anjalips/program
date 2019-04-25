@@ -1,0 +1,144 @@
+student@T3:~/ajce/mca/mca/ar$ ls -a > f1.txt
+student@T3:~/ajce/mca/mca/ar$ ls -a
+.   anjali.txt   file2.txt  GFG       name1.txt
+..  capital.txt  file7.txt  grep      number.txt
+am  f1.txt       file.txt   grep.tct  state.txt
+an  f2.txt       gfg        mmmm      t.txt~
+student@T3:~/ajce/mca/mca/ar$ ls -a > name1.txt
+student@T3:~/ajce/mca/mca/ar$ wc -l name1
+wc: name1: No such file or directory
+student@T3:~/ajce/mca/mca/ar$ wc -l > name1
+anjali
+asga
+1
+2
+3
+4
+5
+6
+^C
+student@T3:~/ajce/mca/mca/ar$ ls -a > f11.txt
+student@T3:~/ajce/mca/mca/ar$ wc -l > f11.txt
+1
+2
+3
+4
+5
+6
+7
+8
+^C
+student@T3:~/ajce/mca/mca/ar$ wc -l f11.txt
+0 f11.txt
+student@T3:~/ajce/mca/mca/ar$ wc -l > f11.txt
+sgh
+fghj
+dfghj
+student@T3:~/ajce/mca/mca/ar$ wc -l < f11.txt
+1
+student@T3:~/ajce/mca/mca/ar$ myprogram 2>errorfile
+student@T3:~/ajce/mca/mca/ar$ cat f11.txt | more
+3
+student@T3:~/ajce/mca/mca/ar$ chmod u=rwx,g=rw,o=r chmod.txt
+chmod: cannot access 'chmod.txt': No such file or directory
+student@T3:~/ajce/mca/mca/ar$ ls -l
+total 76
+drwxr-xr-x 4 student student 4096 Feb 21 20:38 am
+drwxr-xr-x 3 student student 4096 Feb 16 17:27 an
+-rw-r--r-- 1 student student   39 Mar  7 15:24 anjali.txt
+-rw-r--r-- 1 student student   94 Feb 25 17:31 capital.txt
+-rw-r--r-- 1 student student   29 Mar 14 15:02 errorfile
+-rw-r--r-- 1 student student    2 Mar 14 14:53 f11.txt
+-rw-r--r-- 1 student student  142 Mar 14 14:47 f1.txt
+-rw-r--r-- 1 student student    5 Feb 16 17:04 f2.txt
+-rw-r--r-- 1 student student   11 Mar  7 15:22 file2.txt
+-rw-r--r-- 1 student student   49 Mar  7 15:20 file7.txt
+-rw-r--r-- 1 student student   37 Mar  7 15:19 file.txt
+drwxr-xr-x 2 student student 4096 Mar 11 11:57 gfg
+-rw-r--r-- 1 student student    0 Mar 11 11:52 GFG
+-rw-r--r-- 1 student student   48 Mar 14 14:45 grep
+-rw-r--r-- 1 student student   48 Mar 14 14:46 grep.tct
+drwxr-xr-x 2 student student 4096 Feb 16 17:26 mmmm
+-rw-r--r-- 1 student student    0 Mar 14 14:49 name1
+-rw-r--r-- 1 student student  142 Mar 14 14:49 name1.txt
+-rw-r--r-- 1 student student   24 Feb 25 17:45 number.txt
+-rw-r--r-- 1 student student  124 Feb 25 17:34 state.txt
+-rw-r--r-- 1 student student   27 Feb 11 17:29 t.txt~
+student@T3:~/ajce/mca/mca/ar$ ls -l ar
+ls: cannot access 'ar': No such file or directory
+student@T3:~/ajce/mca/mca/ar$ cd ~
+student@T3:~$ ls -l ar
+total 0
+student@T3:~$ ls -l sudent
+ls: cannot access 'sudent': No such file or directory
+student@T3:~$ cd ..
+student@T3:/home$ ls -l ajce
+ls: cannot access 'ajce': No such file or directory
+student@T3:/home$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T3:/home$ cd mca
+student@T3:/home/mca$ cd mca
+bash: cd: mca: No such file or directory
+student@T3:/home/mca$  cd ar
+bash: cd: ar: No such file or directory
+student@T3:/home/mca$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T3:/home/mca$ cd mca
+bash: cd: mca: No such file or directory
+student@T3:/home/mca$ cd mca
+bash: cd: mca: No such file or directory
+student@T3:/home/mca$ cd mca
+bash: cd: mca: No such file or directory
+student@T3:/home/mca$ cd mca
+bash: cd: mca: No such file or directory
+student@T3:/home/mca$ cd/
+bash: cd/: No such file or directory
+student@T3:/home/mca$ cd ..
+student@T3:/home$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T3:/home$ cd ../
+student@T3:/$ cd ~
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$  cd mca
+student@T3:~/ajce/mca/mca$  cd ar
+student@T3:~/ajce/mca/mca/ar$ ls -l an
+total 8
+drwxr-xr-x 2 student student 4096 Feb 14 21:41 ar
+-rw-r--r-- 1 student student   22 Feb 16 17:26 f3.txt
+student@T3:~/ajce/mca/mca/ar$ chmod 111 an
+student@T3:~/ajce/mca/mca/ar$ ls -l an
+ls: cannot open directory 'an': Permission denied
+student@T3:~/ajce/mca/mca/ar$ cat an
+cat: an: Permission denied
+student@T3:~/ajce/mca/mca/ar$ chmod 777 an
+student@T3:~/ajce/mca/mca/ar$ cat an
+cat: an: Is a directory
+student@T3:~/ajce/mca/mca/ar$ ls -l an
+total 8
+drwxr-xr-x 2 student student 4096 Feb 14 21:41 ar
+-rw-r--r-- 1 student student   22 Feb 16 17:26 f3.txt
+student@T3:~/ajce/mca/mca/ar$ chmod 111 an
+student@T3:~/ajce/mca/mca/ar$ ls -l an
+ls: cannot open directory 'an': Permission denied
+student@T3:~/ajce/mca/mca/ar$ chmod u=rwx,g=rw,o=r f1.txt 
+student@T3:~/ajce/mca/mca/ar$ chmod u=x,g=r,o=r f1.txt 
+student@T3:~/ajce/mca/mca/ar$ chmod g+w f1.txt
+student@T3:~/ajce/mca/mca/ar$ chmod g+w state.txt
+student@T3:~/ajce/mca/mca/ar$ chmod g+x state.txt
+student@T3:~/ajce/mca/mca/ar$ chmod o+x state.txt
+student@T3:~/ajce/mca/mca/ar$ chmod u+x state.txt
+student@T3:~/ajce/mca/mca/ar$ chmod u=1,g=2,o=4 state.txt
+chmod: invalid mode: ‘u=1,g=2,o=4’
+Try 'chmod --help' for more information.
+student@T3:~/ajce/mca/mca/ar$ chmod u=xw,g=x,o=r state.txt
+student@T3:~/ajce/mca/mca/ar$ chmod u+w,g+w,o+r number.txt
+student@T3:~/ajce/mca/mca/ar$ chmod u+x,g+x,o+x number.txt
+student@T3:~/ajce/mca/mca/ar$ chmod u+w,g+w,o+w file7.txt
+student@T3:~/ajce/mca/mca/ar$ ls -l file7.txt
+-rw-rw-rw- 1 student student 49 Mar  7 15:20 file7.txt
+student@T3:~/ajce/mca/mca/ar$ chmod u+x,g+x,o+x file7.txt
+student@T3:~/ajce/mca/mca/ar$ ls -l file7.txt
+-rwxrwxrwx 1 student student 49 Mar  7 15:20 file7.txt
+student@T3:~/ajce/mca/mca/ar$ 
+

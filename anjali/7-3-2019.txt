@@ -1,0 +1,111 @@
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ cd mca
+student@T3:~/ajce/mca/mca$ cd ar
+student@T3:~/ajce/mca/mca/ar$ pwd
+/home/student/ajce/mca/mca/ar
+student@T3:~/ajce/mca/mca/ar$ cat
+^C
+
+^C
+student@T3:~/ajce/mca/mca/ar$ cat > file.txt
+hello all
+how are you
+what about you
+^C
+student@T3:~/ajce/mca/mca/ar$ grep "all" file.txt
+hello all
+student@T3:~/ajce/mca/mca/ar$ cat >file7.txt
+there is something
+all are happy
+i need everyone
+^C
+student@T3:~/ajce/mca/mca/ar$ 
+student@T3:~/ajce/mca/mca/ar$ grep "happy"
+^C
+student@T3:~/ajce/mca/mca/ar$ grep "happy" file7.txt
+all are happy
+student@T3:~/ajce/mca/mca/ar$ cat > file2/txt
+bash: file2/txt: No such file or directory
+student@T3:~/ajce/mca/mca/ar$ cat > file2.txt
+happy
+need
+^C
+student@T3:~/ajce/mca/mca/ar$ grep  "all" file7.txt file2.txt
+file7.txt:all are happy
+student@T3:~/ajce/mca/mca/ar$ grep  "happy" file7.txt file2.txt
+file7.txt:all are happy
+file2.txt:happy
+student@T3:~/ajce/mca/mca/ar$ cat >anjali.txt
+hello anitta
+hello albina
+hello anjana
+^C
+student@T3:~/ajce/mca/mca/ar$ 
+student@T3:~/ajce/mca/mca/ar$ grep -i "hello" anjali.txt
+hello anitta
+hello albina
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep -w 'I|is" file.txt file7.txt
+> ^C
+student@T3:~/ajce/mca/mca/ar$ grep -w "need" file7.txt
+i need everyone
+student@T3:~/ajce/mca/mca/ar$ egrep -w 'I|is" file.txt file7.txt
+> ^C
+student@T3:~/ajce/mca/mca/ar$ egrep -w 'all|is" file.txt file7.txt
+> egrep -w 'all|is" file.txt file7.txt^C
+student@T3:~/ajce/mca/mca/ar$ egrep -w 'all|is' file.txt file7.txt
+file.txt:hello all
+file7.txt:there is something
+file7.txt:all are happy
+student@T3:~/ajce/mca/mca/ar$ grep -l3 "albina" anjali.txt
+anjali.txt
+student@T3:~/ajce/mca/mca/ar$ grep -al3 "albina" anjali.txt
+anjali.txt
+student@T3:~/ajce/mca/mca/ar$ grep 'all*' file.txt
+hello all
+student@T3:~/ajce/mca/mca/ar$ grep -B4 "hello" anjali.txt
+hello anitta
+hello albina
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep -B2 "hello" anjali.txt
+hello anitta
+hello albina
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep -B2 "anjana" anjali.txt
+hello anitta
+hello albina
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep -B1 "anjana" anjali.txt
+hello albina
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep -A1 "albina" anjali.txt
+hello albina
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep -v "anitta" anjali.txt
+hello albina
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep -c "anitta" anjali.txt
+1
+student@T3:~/ajce/mca/mca/ar$ grep -n "anitta" anjali.txt
+1:hello anitta
+student@T3:~/ajce/mca/mca/ar$ grep "^start" anjali.txt
+student@T3:~/ajce/mca/mca/ar$ grep "^hello" anjali.txt
+hello anitta
+hello albina
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep "^there" file7.txt
+there is something
+student@T3:~/ajce/mca/mca/ar$ grep "is&" file7.txt
+student@T3:~/ajce/mca/mca/ar$ grep "is$" file7.txt
+student@T3:~/ajce/mca/mca/ar$ grep "anjana$" anjali.txt
+hello anjana
+student@T3:~/ajce/mca/mca/ar$ grep 'anitta|anjana'*.txt
+^C
+student@T3:~/ajce/mca/mca/ar$ grep -l "anjana" *
+grep: am: Is a directory
+grep: an: Is a directory
+anjali.txt
+grep: mmmm: Is a directory
+student@T3:~/ajce/mca/mca/ar$ 
+

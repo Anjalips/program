@@ -1,0 +1,118 @@
+student@T3:/$ cd ~
+student@T3:~$ mkdir ajce
+mkdir: cannot create directory ‘ajce’: File exists
+student@T3:~$ mkdir amalj
+student@T3:~$ cd amalj
+student@T3:~/amalj$ mkdir mca
+student@T3:~/amalj$ cd mca
+student@T3:~/amalj/mca$ mkdir lemca
+student@T3:~/amalj/mca$ mkdir rmca
+student@T3:~/amalj/mca$ mkdir intmca
+student@T3:~/amalj/mca$ ls
+intmca  lemca  rmca
+student@T3:~/amalj/mca$ ls -s
+total 12
+4 intmca  4 lemca  4 rmca
+student@T3:~/amalj/mca$ ls >out.text
+student@T3:~/amalj/mca$ ls /
+bin    dev   initrd.img      lib64       mnt   root  snap  tmp  vmlinuz
+boot   etc   initrd.img.old  lost+found  opt   run   srv   usr  vmlinuz.old
+cdrom  home  lib             media       proc  sbin  sys   var
+student@T3:~/amalj/mca$ ls ~
+aj     aje      Documents         mca       Public           Templates
+ajce   amalj    Downloads         Music     PycharmProjects  Videos
+ajcee  Desktop  examples.desktop  Pictures  snap
+student@T3:~/amalj/mca$ ls ..
+mca
+student@T3:~/amalj/mca$ cd ..
+student@T3:~/amalj$ cd ~
+student@T3:~$ cd /
+student@T3:/$ ls ..
+bin   cdrom  etc   initrd.img      lib    lost+found  mnt  proc  run   snap  sys  usr  vmlinuz
+boot  dev    home  initrd.img.old  lib64  media       opt  root  sbin  srv   tmp  var  vmlinuz.old
+student@T3:/$ cd ~
+student@T3:~$ cd mca
+student@T3:~/mca$ ls -t
+student@T3:~/mca$ ls
+student@T3:~/mca$ cd ~
+student@T3:~$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T3:~$ cd mca
+student@T3:~/mca$ cd ..
+student@T3:~$ cd /
+student@T3:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T3:/$ cd ~
+student@T3:~$ cd amalj
+student@T3:~/amalj$ cd mca
+student@T3:~/amalj/mca$ ls -t
+out.text  intmca  rmca  lemca
+student@T3:~/amalj/mca$ ls *
+out.text
+
+intmca:
+
+lemca:
+
+rmca:
+student@T3:~/amalj/mca$ ls -d
+.
+student@T3:~/amalj/mca$ pwd
+/home/student/amalj/mca
+student@T3:~/amalj/mca$ man/ls
+bash: man/ls: No such file or directory
+student@T3:~/amalj/mca$ cd ~
+student@T3:~$ man ls
+student@T3:~$ cd ~
+student@T3:~$ cd amalj
+student@T3:~/amalj$ cd mca
+student@T3:~/amalj/mca$ ls -l
+total 16
+drwxr-xr-x 2 student student 4096 Jan 31 20:35 intmca
+drwxr-xr-x 2 student student 4096 Jan 31 20:35 lemca
+-rw-r--r-- 1 student student   27 Jan 31 20:36 out.text
+drwxr-xr-x 2 student student 4096 Jan 31 20:35 rmca
+student@T3:~/amalj/mca$ ls -a
+.  ..  intmca  lemca  out.text  rmca
+student@T3:~/amalj/mca$ ls -t
+out.text  intmca  rmca  lemca
+student@T3:~/amalj/mca$ ls -s
+total 16
+4 intmca  4 lemca  4 out.text  4 rmca
+student@T3:~/amalj/mca$ ls *
+out.text
+
+intmca:
+
+lemca:
+
+rmca:
+student@T3:~/amalj/mca$ ls -R
+.:
+intmca  lemca  out.text  rmca
+
+./intmca:
+
+./lemca:
+
+./rmca:
+student@T3:~/amalj/mca$ ls > out.txt
+student@T3:~/amalj/mca$ ls -d*/
+ls: invalid option -- '*'
+Try 'ls --help' for more information.
+student@T3:~/amalj/mca$ ls -d*/
+ls: invalid option -- '*'
+Try 'ls --help' for more information.
+student@T3:~/amalj/mca$ ls -d $PWD*/
+/home/student/amalj/mca/
+student@T3:~/amalj/mca$ ls -d* /
+ls: invalid option -- '*'
+Try 'ls --help' for more information.
+student@T3:~/amalj/mca$ ls -d* /
+ls: invalid option -- '*'
+Try 'ls --help' for more information.
+student@T3:~/amalj/mca$ ls -d* 
+ls: invalid option -- '*'
+Try 'ls --help' for more information.
+student@T3:~/amalj/mca$ 
+

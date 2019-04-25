@@ -1,0 +1,182 @@
+READ(2)                    Linux Programmer's Manual                   READ(2)
+
+NAME
+       read - read from a file descriptor
+
+SYNOPSIS
+       #include <unistd.h>
+
+       ssize_t read(int fd, void *buf, size_t count);
+
+DESCRIPTION
+       read()  attempts to read up to count bytes from file descriptor fd into
+       the buffer starting at buf.
+
+       On files that support seeking, the read operation commences at the file
+       offset, and the file offset is incremented by the number of bytes read.
+       If the file offset is at or past the end of file, no  bytes  are  read,
+       and read() returns zero.
+
+       If count is zero, read() may detect the errors described below.  In the
+       absence of any errors, or if read() does not check for errors, a read()
+       with a count of 0 returns zero and has no other effects.
+
+       According to POSIX.1, if count is greater than SSIZE_MAX, the result is
+       implementation-defined; see NOTES for the upper limit on Linux.
+
+RETURN VALUE
+       On success, the number of bytes read is returned (zero indicates end of
+       file),  and the file position is advanced by this number.  It is not an
+       error if this number is smaller than the  number  of  bytes  requested;
+       this  may happen for example because fewer bytes are actually available
+       right now (maybe because we were close to end-of-file,  or  because  we
+       are  reading  from  a  pipe, or from a terminal), or because read() was
+       interrupted by a signal.  See also NOTES.
+
+       On error, -1 is returned, and errno  is  set  appropriately.   In  this
+       case,  it  is  left  unspecified  whether  the  file  position (if any)
+ Manual page read(2) line 1/131 27% (press h for help or q to quit)
+
+
+
+
+
+
+
+examples
+
+
+
+
+
+
+student@T3:~$ 
+student@T3:~$ echo anjali
+anjali
+student@T3:~$ man echo
+student@T3:~$ read a
+10
+student@T3:~$ echo $a
+10
+student@T3:~$ man read
+student@T3:~$ man man
+student@T3:~$ echo -n anjali
+anjalistudent@T3:~$ -e anjali
+-e: command not found
+student@T3:~$ -e anjale
+-e: command not found
+student@T3:~$ echo -E anjali
+anjali
+student@T3:~$ echo -e anjali
+anjali
+student@T3:~$ read a
+10
+student@T3:~$ echo the valuue of a is $a
+the valuue of a is 10
+student@T3:~$ 
+
+
+MAN(1)                                                      Manual pager utils                                                      MAN(1)
+
+NAME
+       man - an interface to the on-line reference manuals
+
+SYNOPSIS
+       man  [-C  file]  [-d]  [-D]  [--warnings[=warnings]] [-R encoding] [-L locale] [-m system[,...]] [-M path] [-S list] [-e extension]
+       [-i|-I] [--regex|--wildcard] [--names-only] [-a] [-u] [--no-subpages] [-P pager] [-r prompt] [-7] [-E encoding]  [--no-hyphenation]
+       [--no-justification] [-p string] [-t] [-T[device]] [-H[browser]] [-X[dpi]] [-Z] [[section] page[.section] ...] ...
+       man -k [apropos options] regexp ...
+       man -K [-w|-W] [-S list] [-i|-I] [--regex] [section] term ...
+       man -f [whatis options] page ...
+       man  -l [-C file] [-d] [-D] [--warnings[=warnings]] [-R encoding] [-L locale] [-P pager] [-r prompt] [-7] [-E encoding] [-p string]
+       [-t] [-T[device]] [-H[browser]] [-X[dpi]] [-Z] file ...
+       man -w|-W [-C file] [-d] [-D] page ...
+       man -c [-C file] [-d] [-D] page ...
+       man [-?V]
+
+DESCRIPTION
+       man is the system's manual pager.  Each page argument given to man is normally the name of a program,  utility  or  function.   The
+       manual  page  associated with each of these arguments is then found and displayed.  A section, if provided, will direct man to look
+       only in that section of the manual.  The default action is to search in all of the available sections following a pre-defined order
+       ("1  n  l 8 3 2 3posix 3pm 3perl 3am 5 4 9 6 7" by default, unless overridden by the SECTION directive in /etc/manpath.config), and
+       to show only the first page found, even if page exists in several sections.
+
+       The table below shows the section numbers of the manual followed by the types of pages they contain.
+
+       1   Executable programs or shell commands
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev)
+       5   File formats and conventions eg /etc/passwd
+       6   Games
+       7   Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]
+
+ Manual page man(1) line 1 (press h for help or q to quit)
+
+ECHO(1)                                                        User Commands                                                       ECHO(1)
+
+NAME
+       echo - display a line of text
+
+SYNOPSIS
+       echo [SHORT-OPTION]... [STRING]...
+       echo LONG-OPTION
+
+DESCRIPTION
+       Echo the STRING(s) to standard output.
+
+       -n     do not output the trailing newline
+
+       -e     enable interpretation of backslash escapes
+
+       -E     disable interpretation of backslash escapes (default)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       If -e is in effect, the following sequences are recognized:
+
+       \\     backslash
+
+       \a     alert (BEL)
+
+       \b     backspace
+
+       \c     produce no further output
+
+       \e     escape
+
+       \f     form feed
+
+ Manual page echo(1) line 1 (press h for help or q to quit)
+
+student@T3:~$ read a b
+100 200
+student@T3:~$ echo a=
+a=
+student@T3:~$ echo a=$a b=$b
+a=100 b=200
+student@T3:~$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

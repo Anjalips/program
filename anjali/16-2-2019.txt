@@ -1,0 +1,245 @@
+student@T3:~$ man rm
+student@T3:~$ cd ajce
+student@T3:~/ajce$ cd mca
+student@T3:~/ajce/mca$ cd mca
+student@T3:~/ajce/mca/mca$ cd ar
+student@T3:~/ajce/mca/mca/ar$ rm -v f.txt
+removed 'f.txt'
+student@T3:~/ajce/mca/mca/ar$ man mv
+student@T3:~/ajce/mca/mca/ar$ man rv
+No manual entry for rv
+student@T3:~/ajce/mca/mca/ar$ man rm
+student@T3:~/ajce/mca/mca/ar$ touch f1.txt
+student@T3:~/ajce/mca/mca/ar$ wc f1.txt
+ 3  6 45 f1.txt
+student@T3:~/ajce/mca/mca/ar$ cat >f2.txt
+amal 
+^C
+student@T3:~/ajce/mca/mca/ar$ wc f2.txt
+1 1 5 f2.txt
+student@T3:~/ajce/mca/mca/ar$ wc -i f1.txt
+wc: invalid option -- 'i'
+Try 'wc --help' for more information.
+student@T3:~/ajce/mca/mca/ar$ wc -l f1.txt
+3 f1.txt
+student@T3:~/ajce/mca/mca/ar$ wc -c f1.txt
+45 f1.txt
+student@T3:~/ajce/mca/mca/ar$ wc -m f2.txt
+5 f2.txt
+student@T3:~/ajce/mca/mca/ar$ wc -m f1.txt
+45 f1.txt
+student@T3:~/ajce/mca/mca/ar$ wc -L f1.txt
+19 f1.txt
+student@T3:~/ajce/mca/mca/ar$ wc -w f1.txt
+6 f1.txt
+student@T3:~/ajce/mca/mca/ar$ man wc
+student@T3:~/ajce/mca/mca/ar$ wc f1.txt
+ 3  6 45 f1.txt
+student@T3:~/ajce/mca/mca/ar$ wc -l f2.txt
+1 f2.txt
+student@T3:~/ajce/mca/mca/ar$ wc -L f2.txt
+4 f2.txt
+student@T3:~/ajce/mca/mca/ar$ wc -m f2.txt
+5 f2.txt
+student@T3:~/ajce/mca/mca/ar$ wc -w f2.txt
+1 f2.txt
+student@T3:~/ajce/mca/mca/ar$ wc -c f2.txt
+5 f2.txt
+student@T3:~/ajce/mca/mca/ar$ wc -c f1.txt
+45 f1.txt
+student@T3:~/ajce/mca/mca/ar$ wc -m f1.txt
+45 f1.txt
+student@T3:~/ajce/mca/mca/ar$ ls
+am  amalj  an  ar  f1.txt  f2.txt  mmmm  t.txt~
+student@T3:~/ajce/mca/mca/ar$ mv -b  amalj mmm
+student@T3:~/ajce/mca/mca/ar$ ls
+am  an  ar  f1.txt  f2.txt  mmm  mmmm  t.txt~
+student@T3:~/ajce/mca/mca/ar$ mv -b  amalj mmmm
+mv: cannot stat 'amalj': No such file or directory
+student@T3:~/ajce/mca/mca/ar$ mv -b  ar mmmm
+student@T3:~/ajce/mca/mca/ar$ ls
+am  an  f1.txt  f2.txt  mmm  mmmm  t.txt~
+student@T3:~/ajce/mca/mca/ar$ cat > f3.txt
+gygugdszuj
+bjszufchuj
+^C
+student@T3:~/ajce/mca/mca/ar$ mv -b f3.txt an
+student@T3:~/ajce/mca/mca/ar$ ls
+am  an  f1.txt  f2.txt  mmm  mmmm  t.txt~
+student@T3:~/ajce/mca/mca/ar$ cat > f4.txt
+123
+147
+^C
+student@T3:~/ajce/mca/mca/ar$ mv -b f4.txt am
+student@T3:~/ajce/mca/mca/ar$ ls
+am  an  f1.txt  f2.txt  mmm  mmmm  t.txt~
+student@T3:~/ajce/mca/mca/ar$ mv -b mmm.txt 
+mv: missing destination file operand after 'mmm.txt'
+Try 'mv --help' for more information.
+student@T3:~/ajce/mca/mca/ar$ mv -b mmm.txt am
+mv: cannot stat 'mmm.txt': No such file or directory
+student@T3:~/ajce/mca/mca/ar$ mv -b mmm am
+student@T3:~/ajce/mca/mca/ar$ ls 
+am  an  f1.txt  f2.txt  mmmm  t.txt~
+student@T3:~/ajce/mca/mca/ar$ mv mca arun
+mv: cannot stat 'mca': No such file or directory
+student@T3:~/ajce/mca/mca/ar$ cd ..
+student@T3:~/ajce/mca/mca$ mv mca arun
+mv: cannot stat 'mca': No such file or directory
+student@T3:~/ajce/mca/mca$ cat > cut.txt
+anitta
+anjali
+albina
+anjana
+asha
+nadhi
+^C
+^C
+student@T3:~/ajce/mca/mca$ cut -c4 cut.txt
+t
+a
+i
+a
+a
+h
+
+student@T3:~/ajce/mca/mca$ man cut
+student@T3:~/ajce/mca/mca$ cut -c2,3,4 cut.txt
+nit
+nja
+lbi
+nja
+sha
+adh
+
+student@T3:~/ajce/mca/mca$ cut -b cut.txt
+cut: invalid byte/character position ‘cut.txt’
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -b -c4 cut.txt
+cut: invalid byte/character position ‘c4’
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -b 2 cut.txt
+n
+n
+l
+n
+s
+a
+
+student@T3:~/ajce/mca/mca$ cut -c 2 cut.txt
+n
+n
+l
+n
+s
+a
+
+student@T3:~/ajce/mca/mca$ cut -d 2 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -n 2 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -z 2 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -z 2 3 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -f 3 cut.txt
+anitta
+anjali
+albina
+anjana
+asha
+nadhi
+
+student@T3:~/ajce/mca/mca$ cut -n 3 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -b 3 cut.txt
+i
+j
+b
+j
+h
+d
+
+student@T3:~/ajce/mca/mca$ cut -c 3 cut.txt
+i
+j
+b
+j
+h
+d
+
+student@T3:~/ajce/mca/mca$ cut -n 3 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -n  cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -n  cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ man cut
+student@T3:~/ajce/mca/mca$ cut -t2 cut.txt
+cut: invalid option -- 't'
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -f2 cut.txt
+ashuuu
+anjali
+albina
+anjana
+asha
+nadhi
+
+student@T3:~/ajce/mca/mca$ man cut
+student@T3:~/ajce/mca/mca$ cut -d 2 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -f2 cut.txt
+ashuuu
+anjali,arya
+albina
+anjana
+asha
+nadhi
+
+student@T3:~/ajce/mca/mca$ cut -f2 cut.txt
+ashuuu
+anjali,arya
+albina
+
+
+
+anjana
+asha
+nadhi
+
+student@T3:~/ajce/mca/mca$ cut -d  cut.txt
+cut: the delimiter must be a single character
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -d 2 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -d ' '  cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ cut -d ' ' -f1 cut.txt
+anitta,ashuuu
+anjali,arya
+albina
+
+
+
+anjana
+asha
+nadhi
+
+student@T3:~/ajce/mca/mca$ cut -d ' ' 2 cut.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T3:~/ajce/mca/mca$ 
+student@T3:~/ajce/mca/mca$ 
+

@@ -1,0 +1,295 @@
+student@T3:~$ git config --global user.name "anjali"
+student@T3:~$ git config --global user.email "anjalips@mca.ajce.in"
+student@T3:~$ git init mytest
+Initialized empty Git repository in /home/student/mytest/.git/
+student@T3:~$ cd mytest
+student@T3:~/mytest$ gedit README
+student@T3:~/mytest$ gedit sample program
+student@T3:~/mytest$ git add README
+student@T3:~/mytest$ gedit add sample program
+student@T3:~/mytest$ gedit add sample.c
+student@T3:~/mytest$ git add sample.c
+fatal: pathspec 'sample.c' did not match any files
+student@T3:~/mytest$ git sample.c
+git: 'sample.c' is not a git command. See 'git --help'.
+student@T3:~/mytest$ gedit sample.c
+student@T3:~/mytest$ git add sample.c
+student@T3:~/mytest$ git commit -m "commite the program"
+[master (root-commit) c6f0f9b] commite the program
+ 2 files changed, 9 insertions(+)
+ create mode 100644 README
+ create mode 100644 sample.c
+student@T3:~/mytest$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git push  master
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream master master
+
+student@T3:~/mytest$ git remote add origin https://github.com/Anjalips/Anjali-sample.git
+student@T3:~/mytest$ git push origin master 
+Username for 'https://github.com': anjali
+Password for 'https://anjali@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Anjalips/Anjali-sample.git/'
+student@T3:~/mytest$ git push origin master 
+Username for 'https://github.com': anjali
+Password for 'https://anjali@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Anjalips/Anjali-sample.git/'
+student@T3:~/mytest$ git push origin master 
+Username for 'https://github.com': anjali
+Password for 'https://anjali@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Anjalips/Anjali-sample.git/'
+student@T3:~/mytest$ git push origin master 
+Username for 'https://github.com': anjali
+Password for 'https://anjali@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Anjalips/Anjali-sample.git/'
+student@T3:~/mytest$ git push origin master 
+Username for 'https://github.com': Anjalips
+Password for 'https://Anjalips@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 334 bytes | 334.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Anjalips/Anjali-sample.git
+ * [new branch]      master -> master
+student@T3:~/mytest$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	add
+	sample
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T3:~/mytest$ git clone https://github.com/Anjalips/Anjali-sample
+Cloning into 'Anjali-sample'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+student@T3:~/mytest$ git log
+commit c6f0f9b8ca07d6b3b176e9afc33bde6d07b1b9a0 (HEAD -> master, origin/master)
+Author: anjali <anjalips@mca.ajce.in>
+Date:   Mon Apr 8 11:50:34 2019 +0530
+
+    commite the program
+student@T3:~/mytest$ git branch newbranch
+student@T3:~/mytest$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Anjali-sample/
+	add
+	sample
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T3:~/mytest$ git checkout newbranch
+Switched to branch 'newbranch'
+student@T3:~/mytest$ git status
+On branch newbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Anjali-sample/
+	add
+	sample
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T3:~/mytest$ git branch sbranch
+student@T3:~/mytest$ git branch tbranch
+student@T3:~/mytest$ git status
+On branch newbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Anjali-sample/
+	add
+	sample
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T3:~/mytest$ git delete tbranch
+git: 'delete' is not a git command. See 'git --help'.
+student@T3:~/mytest$ git remove tbranch
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote
+student@T3:~/mytest$ git branch -d newbranch
+error: Cannot delete branch 'newbranch' checked out at '/home/student/mytest'
+student@T3:~/mytest$ git checkout tbranch
+Switched to branch 'tbranch'
+student@T3:~/mytest$ git status
+On branch tbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Anjali-sample/
+	add
+	sample
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T3:~/mytest$ git checkout newbranch
+Switched to branch 'newbranch'
+student@T3:~/mytest$ git branch -d tbranch
+Deleted branch tbranch (was c6f0f9b).
+student@T3:~/mytest$ git merge newbranch
+Already up to date.
+student@T3:~/mytest$ git merge sbranch
+Already up to date.
+student@T3:~/mytest$ git merge sbranch
+Already up to date.
+student@T3:~/mytest$ git push origin  sbranch
+Username for 'https://github.com': anjali
+Password for 'https://anjali@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Anjalips/Anjali-sample.git/'
+student@T3:~/mytest$ git push origin  sbranch
+Username for 'https://github.com': AnjaliPs
+Password for 'https://AnjaliPs@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'sbranch' on GitHub by visiting:
+remote:      https://github.com/Anjalips/Anjali-sample/pull/new/sbranch
+remote: 
+To https://github.com/Anjalips/Anjali-sample.git
+ * [new branch]      sbranch -> sbranch
+student@T3:~/mytest$ git merge sbranch
+Already up to date.
+student@T3:~/mytest$ git push sbranch
+fatal: 'sbranch' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git push origin sbranch
+Username for 'https://github.com': AnjaliPs
+Password for 'https://AnjaliPs@github.com': 
+Everything up-to-date
+student@T3:~/mytest$ git pull origin master
+From https://github.com/Anjalips/Anjali-sample
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+student@T3:~/mytest$ git merge origin newbranch
+merge: origin - not something we can merge
+student@T3:~/mytest$ git fetch origin newbranch
+fatal: Couldn't find remote ref newbranch
+student@T3:~/mytest$ git fetch origin master  
+From https://github.com/Anjalips/Anjali-sample
+ * branch            master     -> FETCH_HEAD
+student@T3:~/mytest$ git merge origin/newbranch
+merge: origin/newbranch - not something we can merge
+student@T3:~/mytest$ git merge origin/master
+Already up to date.
+student@T3:~/mytest$ git pull origin master
+From https://github.com/Anjalips/Anjali-sample
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+student@T3:~/mytest$ git branch b3
+student@T3:~/mytest$ git push origin b3
+Username for 'https://github.com': AnjaliPs
+Password for 'https://AnjaliPs@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'b3' on GitHub by visiting:
+remote:      https://github.com/Anjalips/Anjali-sample/pull/new/b3
+remote: 
+To https://github.com/Anjalips/Anjali-sample.git
+ * [new branch]      b3 -> b3
+student@T3:~/mytest$ git branch -d b3
+Deleted branch b3 (was c6f0f9b).
+student@T3:~/mytest$ git status
+On branch newbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Anjali-sample/
+	add
+	sample
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T3:~/mytest$ git remote rm origin
+student@T3:~/mytest$ git push master :b3
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git push master : b3
+error: src refspec b3 does not match any.
+error: failed to push some refs to 'master'
+student@T3:~/mytest$ $ git push master --delete b3
+$: command not found
+student@T3:~/mytest$  git push master --delete b3
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git checkout master
+Switched to branch 'master'
+student@T3:~/mytest$ $ git push master --delete b3
+$: command not found
+student@T3:~/mytest$  git push master --delete b3
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git push master --delete b3
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git push newbranch --delete b3
+fatal: 'newbranch' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git diff
+student@T3:~/mytest$ git diff --stat newbranch sbranch
+usage: git diff [<options>] [<commit> [<commit>]] [--] [<path>...]
+student@T3:~/mytest$ git rm -r sbranch
+fatal: pathspec 'sbranch' did not match any files
+student@T3:~/mytest$ git rm -R sbranch
+error: unknown switch `R'
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+student@T3:~/mytest$ git push origin --delete sbranch
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git push master --delete sbranch
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T3:~/mytest$ git rebase onto newbranch
+fatal: Needed a single revision
+invalid upstream 'onto'
+student@T3:~/mytest$ ^C
+student@T3:~/mytest$ 
+

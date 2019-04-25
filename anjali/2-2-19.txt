@@ -1,0 +1,123 @@
+student@T3:~$ touch sample.txt
+student@T3:~$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T3:~$ cd ~
+student@T3:~$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T3:~$ cd mca
+student@T3:~/mca$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T3:~/mca$ cd rlmca
+bash: cd: rlmca: No such file or directory
+student@T3:~/mca$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T3:~/mca$ cd ~
+student@T3:~$ cd amalj
+student@T3:~/amalj$ cd mca
+student@T3:~/amalj/mca$ cd rmca
+student@T3:~/amalj/mca/rmca$ cat sample.txt
+cat: sample.txt: No such file or directory
+student@T3:~/amalj/mca/rmca$ cat samplee.txt
+cat: samplee.txt: No such file or directory
+student@T3:~/amalj/mca/rmca$ cat.sample.text
+cat.sample.text: command not found
+student@T3:~/amalj/mca/rmca$ cat.sample.txt
+cat.sample.txt: command not found
+student@T3:~/amalj/mca/rmca$ cat sample.txt
+anjali
+
+student@T3:~/amalj/mca/rmca$ cat > file1.txt
+1
+2
+3
+^C
+student@T3:~/amalj/mca/rmca$ cat file1.txt
+1
+2
+3
+student@T3:~/amalj/mca/rmca$ cat *.txt
+1
+2
+3
+anjali
+
+student@T3:~/amalj/mca/rmca$ cat sample.txt file1.txt
+anjali
+
+1
+2
+3
+student@T3:~/amalj/mca/rmca$ cat sample.txt >sam.txt
+student@T3:~/amalj/mca/rmca$ cat sample.txt sam.txt
+anjali
+
+anjali
+welcome
+
+student@T3:~/amalj/mca/rmca$ cat sample.txt file1.txt sam.txt
+anjali
+
+1
+2
+3
+anjali
+welcome
+
+student@T3:~/amalj/mca/rmca$ cat file1.txt >> file2.txt
+student@T3:~/amalj/mca/rmca$ cat sample.txt,file1.txt
+cat: sample.txt,file1.txt: No such file or directory
+student@T3:~/amalj/mca/rmca$ cat sample.txt; cat file1.txt;
+anjali
+
+1
+2
+3
+student@T3:~/amalj/mca/rmca$ cat sample.txt>cat file1.txt
+student@T3:~/amalj/mca/rmca$ cat sample.txt>file1.txt
+student@T3:~/amalj/mca/rmca$ cat >new.txt
+    
+^C
+student@T3:~/amalj/mca/rmca$ cat  -s new.txt
+1
+
+2
+
+3
+4
+5
+
+student@T3:~/amalj/mca/rmca$ cat text1.txt
+cat: text1.txt: No such file or directory
+student@T3:~/amalj/mca/rmca$ cat file1.txt
+anjali
+
+student@T3:~/amalj/mca/rmca$ cat sample.txt>cat.txt
+student@T3:~/amalj/mca/rmca$ cat -e sample.txt
+anjali$
+$
+student@T3:~/amalj/mca/rmca$ cat -v sample.txt
+anjali
+
+student@T3:~/amalj/mca/rmca$ cat -n cat.txt
+     1	anjali
+     2	
+student@T3:~/amalj/mca/rmca$ cat -b cat.txt
+     1	anjali
+
+student@T3:~/amalj/mca/rmca$ mv cat.txt sam.txt
+student@T3:~/amalj/mca/rmca$ cd ~
+student@T3:~$ mkdir ajce1
+student@T3:~$ cd amalj
+student@T3:~/amalj$ cd mca
+student@T3:~/amalj/mca$ cd rmca
+student@T3:~/amalj/mca/rmca$ mv sample.txt ajce1
+student@T3:~/amalj/mca/rmca$ mv 
+ajce1      cat        file1.txt  file2.txt  new.txt    sam.txt    
+student@T3:~/amalj/mca/rmca$ mv sam.txt lemca
+student@T3:~/amalj/mca/rmca$ ls
+ajce1  cat  file1.txt  file2.txt  lemca  new.txt
+student@T3:~/amalj/mca/rmca$ mv new.txt  file2.txt
+student@T3:~/amalj/mca/rmca$ ls
+ajce1  cat  file1.txt  file2.txt  lemca
+student@T3:~/amalj/mca/rmca$ mv 
+
